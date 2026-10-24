@@ -94,7 +94,7 @@ nav .btn{padding:10px 20px;font-size:14px}
 .grid{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
 @media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.grid{grid-template-columns:1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr 1fr;gap:12px}.grid .tile{padding:9%;border-radius:20px}.grid .tile b{font-size:22px!important}.grid .s-barber b{font-size:38px!important}.grid .tile small{font-size:9px}.grid .s-barber small,.grid .s-barber p{font-size:12px}.grid .tile p{font-size:12px}.grid .tile .pill{font-size:11px;padding:6px 10px}}
 .tile{aspect-ratio:4/5;border-radius:var(--r);padding:8%;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:transform .35s}
 .tile:hover{transform:translateY(-6px) rotate(-.6deg)}
 .tile small{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
@@ -168,6 +168,21 @@ nav .btn{padding:10px 20px;font-size:14px}
 @media(max-width:760px){.reels{grid-template-columns:repeat(2,1fr)}}
 .reels .frame{aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:#000}
 .reels video{width:100%;height:100%;object-fit:cover;display:block}
+
+.realwork{display:grid;gap:18px;margin-bottom:18px}
+.rw{position:relative;border-radius:var(--r);overflow:hidden;background:#000}
+.rw video,.rw img{width:100%;height:100%;object-fit:cover;display:block}
+.rw.wide{aspect-ratio:8/3}
+.rw-row{display:grid;gap:18px;grid-template-columns:1fr 1fr 2fr}
+.rw.sq{aspect-ratio:1}
+.rw.pano{aspect-ratio:2/1;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.rw .by{position:absolute;left:12px;bottom:12px;background:rgba(30,27,24,.72);color:var(--cream);font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;text-decoration:none;backdrop-filter:blur(6px)}
+.rw .by:hover{background:var(--terra)}
+@media(max-width:760px){.rw.wide{aspect-ratio:16/9}.rw-row{grid-template-columns:1fr 1fr}.rw.pano{grid-column:span 2}}
+.realwork .reels{grid-template-columns:repeat(3,1fr);margin-top:0}
+.realwork .reels .frame{aspect-ratio:4/5}
+.realwork .reels video{object-position:center 35%}
+@media(max-width:560px){.realwork .reels{grid-template-columns:1fr 1fr}.realwork .reels .rw:first-child{grid-column:span 2;max-width:60%;justify-self:center;width:100%}}
 
 /* auditoría gratis */
 .audit{background:var(--terra);color:var(--cream);border-radius:48px}
@@ -321,6 +336,7 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
           <li>Textos con llamada a la acción</li>
           <li>Calendario mensual de contenido</li>
           <li>Guion para tus reels y guía paso a paso para programar tus publicaciones</li>
+          <li>Grabación en tu local, solo en Madrid y con coste extra</li>
         </ul>
       </div>
       <div class="box dark rv">
@@ -329,7 +345,6 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
           <li>No publico directamente en tus cuentas</li>
           <li>No respondo mensajes ni comentarios</li>
           <li>No gestiono publicidad</li>
-          <li>No grabo en tu local</li>
         </ul>
       </div>
     </div>
@@ -344,6 +359,19 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
       <div>
         <span class="eyebrow">Muestras</span>
         <h2>Así podría verse tu contenido.</h2>
+      </div>
+    </div>
+    <div class="realwork">
+      <div class="rw wide rv"><video src="zircon.mp4" poster="zircon.jpg" muted loop playsinline preload="none" aria-label="Vídeo de joyería corporal"></video><a class="by" href="https://www.instagram.com/zirconpiercingba/" target="_blank" rel="noopener">@zirconpiercingba</a></div>
+      <div class="rw-row">
+        <div class="rw sq rv"><video src="ninja.mp4" poster="ninja.jpg" muted loop playsinline preload="none" aria-label="Vídeo de producto: máquina Ninja"></video><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
+        <div class="rw sq rv"><video src="shortpen.mp4" poster="shortpen.jpg" muted loop playsinline preload="none" aria-label="Vídeo de producto: Short Pen"></video><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
+        <div class="rw pano rv"><img src="navidad-1.jpg" alt="Carrusel de Navidad, diapositiva 1" loading="lazy"><img src="navidad-2.jpg" alt="Carrusel de Navidad, diapositiva 2" loading="lazy"><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
+      </div>
+      <div class="reels rv" id="trabajo">
+        <div class="frame rw"><video src="rosa-reel.mp4" poster="rosa-reel.jpg" muted loop playsinline preload="none" aria-label="Reel de producto para tatuadores"></video><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
+        <div class="frame rw"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none" aria-label="Reel de laminado de cejas"></video><a class="by" href="https://www.instagram.com/nailsbyflor.st/" target="_blank" rel="noopener">@nailsbyflor.st</a></div>
+        <div class="frame rw"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none" aria-label="Reel de uñas esculpidas"></video><a class="by" href="https://www.instagram.com/nailsbyflor.st/" target="_blank" rel="noopener">@nailsbyflor.st</a></div>
       </div>
     </div>
     <div class="grid">
@@ -362,32 +390,12 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
         <div><b>Tu café<br><i>de las diez.</i></b><p>Flat white + tostada del día</p></div>
         <span class="pill">Te esperamos</span>
       </article>
-      <article class="tile s-moda rv">
-        <div class="img" style="background-image:url(moda.jpg)"></div>
-        <small>Tienda de ropa · Post</small>
-        <div><b>LO<br>NUEVO</b><p>Tonos tierra · Otoño</p></div>
-        <span class="pill">Ver en tienda →</span>
-      </article>
-      <article class="tile s-pilates rv" style="background-image:url(pilates.jpg)">
-        <small>Estudio de pilates · Post</small>
-        <div><b>Prueba<br>el reformer</b><p>Grupos reducidos · todos los niveles</p></div>
-        <span class="pill">Prueba una clase</span>
-      </article>
       <article class="tile s-unas rv">
         <div class="circle" style="background-image:url(unas-foto.jpg)"></div>
         <small>Salón de uñas · Post</small>
         <div><b><i>Nude</i> que combina<br>con todo</b><p>Esmaltado semipermanente</p></div>
         <span class="pill">Pide tu cita</span>
       </article>
-      <article class="tile s-cosmetica rv" style="background-image:url(cosmetica.jpg)">
-        <small>Ecommerce de cosmética · Post</small>
-        <div><b>Sérum Calma</b><p>30 ml · piel sensible</p></div>
-        <span class="pill">Comprar ahora</span>
-      </article>
-    </div>
-    <div class="reels rv" id="trabajo">
-      <div class="frame"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none" aria-label="Reel de laminado de cejas"></video></div>
-      <div class="frame"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none" aria-label="Reel de uñas esculpidas"></video></div>
     </div>
   </div>
 </section>
@@ -454,7 +462,7 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
         </ul>
       </article>
     </div>
-    <p class="plans-note rv">Tú facilitas fotos, vídeos, información de tu negocio y precios. Incluye una ronda de ajustes por entrega. No incluye publicación directa en tus cuentas, gestión de mensajes, publicidad ni grabación presencial.</p>
+    <p class="plans-note rv">Tú facilitas fotos, vídeos, información de tu negocio y precios. Incluye una ronda de ajustes por entrega. No incluye publicación directa en tus cuentas, gestión de mensajes ni publicidad. La grabación en tu local es aparte: solo en Madrid y con coste extra.</p>
 
     <div class="mentoria rv">
       <div>
@@ -476,7 +484,7 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
     </div>
     <div class="steps">
       <div class="step rv"><div class="n">1</div><h3>Hablamos</h3><p>Una llamada breve para conocer tu negocio y elegir el plan.</p></div>
-      <div class="step rv"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información de tu negocio y precios. Para los reels te paso el guion y tú grabas.</p></div>
+      <div class="step rv"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información de tu negocio y precios. Para los reels te paso el guion y tú grabas (o grabo yo, si estás en Madrid).</p></div>
       <div class="step rv"><div class="n">3</div><h3>Preparo tu mes</h3><p>Entrega en hasta 72 horas desde que tengo todo.</p></div>
       <div class="step rv"><div class="n">4</div><h3>Recibes y ajustamos</h3><p>Archivos listos para publicar, con una ronda de ajustes.</p></div>
     </div>
@@ -495,7 +503,8 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
       <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por cada entrega.</p></details>
       <details><summary>¿Puedo usar un plan para dos marcas?</summary><p>No. Cada plan es para una marca.</p></details>
       <details><summary>¿Trabajas con IA?</summary><p>Sí. Uso herramientas de IA para crear y editar, y reviso cada pieza antes de entregarla.</p></details>
-      <details><summary>¿Grabas en mi local o gestionas anuncios y mensajes?</summary><p>No. Me centro en crear y editar tu contenido con el material que me envías.</p></details>
+      <details><summary>¿Grabas en mi local?</summary><p>Sí, solo en Madrid y con coste extra. Si estás en otra ciudad, te paso el guion y tú grabas.</p></details>
+      <details><summary>¿Gestionas anuncios y mensajes?</summary><p>No. Me centro en crear y editar tu contenido.</p></details>
     </div>
   </div>
 </section>
@@ -532,7 +541,7 @@ const io = new IntersectionObserver(es=>es.forEach(e=>{
 const vio = new IntersectionObserver(es=>es.forEach(e=>{
   e.isIntersecting ? e.target.play().catch(()=>{}) : e.target.pause();
 }),{threshold:.4});
-document.querySelectorAll(".reels video").forEach(v=>vio.observe(v));
+document.querySelectorAll("#muestras video").forEach(v=>vio.observe(v));
 document.querySelectorAll(".rv").forEach((el,i)=>{ el.style.transitionDelay = (i%3)*80+"ms"; io.observe(el); });
 </script>
 </body>
