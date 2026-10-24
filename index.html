@@ -67,12 +67,6 @@ nav .btn{padding:10px 20px;font-size:14px}
 .c2 i{background:var(--terra);color:var(--cream)}
 .c3{background:var(--ink);color:var(--cream);left:22%;bottom:0;transform:rotate(-1.5deg);z-index:3}
 .c3 i{background:var(--cream);color:var(--ink)}
-.card.photo{background-size:cover;background-position:center;color:#fff;overflow:hidden}
-.card.photo>*{position:relative;z-index:1}
-.card.photo::before{content:"";position:absolute;inset:0;border-radius:inherit}
-.c1.photo::before{background:linear-gradient(180deg,rgba(185,106,82,.35),rgba(185,106,82,.9))}
-.c2.photo::before{background:linear-gradient(180deg,rgba(30,27,24,.1),rgba(30,27,24,.8))}
-.c3.photo::before{background:linear-gradient(180deg,rgba(30,27,24,.55),rgba(30,27,24,.85))}
 .stack:hover .c1{transform:rotate(-9deg) translateX(-10px)}
 .stack:hover .c2{transform:rotate(7deg) translateX(10px)}
 
@@ -163,51 +157,7 @@ nav .btn{padding:10px 20px;font-size:14px}
 .s-carrusel{background:#CBB8F0;color:#2A1B4A}
 .s-carrusel b{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,5.6vw,62px)}
 .s-carrusel .pill{background:#2A1B4A;color:#CBB8F0}
-.s-carrusel .circle{position:absolute;width:46%;aspect-ratio:1;border-radius:50%;right:-6%;top:-6%;background-size:cover;background-position:center;border:6px solid #fff}
-.s-carrusel small{max-width:60%}
 .tile .tag{z-index:1}
-
-/* diseños: carruseles e historias */
-.designs-head{margin:88px 0 36px}
-.designs-head h3{font-size:clamp(30px,4vw,44px)}
-.designs-head p{color:var(--ink-70);margin-top:10px;max-width:52ch}
-.designs{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);align-items:start}
-.designs .d-item:has(.carousel){grid-column:span 2}
-@media(max-width:860px){.designs{grid-template-columns:1fr}.designs .d-item:has(.carousel){grid-column:auto}}
-.d-item figcaption{margin-top:14px;font-size:15px;color:var(--ink-70)}
-.d-item figcaption b{display:block;color:var(--ink);font-family:var(--serif);font-weight:400;font-size:22px}
-.carousel{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-@media(max-width:560px){.carousel{grid-template-columns:repeat(3,72%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.carousel>*{scroll-snap-align:start}}
-.sl{aspect-ratio:4/5;border-radius:18px;padding:9%;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background-size:cover;background-position:center}
-.sl>*{position:relative;z-index:1}
-.sl .num{font-size:12px;font-weight:700;letter-spacing:.12em;opacity:.7}
-.story{aspect-ratio:9/16;border-radius:22px;padding:9% 8%;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background-size:cover;background-position:center;color:#fff;max-width:360px}
-.story>*{position:relative;z-index:1}
-.story::before{content:"";position:absolute;inset:0}
-.story .bar{display:flex;gap:4px}.story .bar i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.45)}.story .bar i:first-child{background:#fff}
-.poll{background:#fff;color:#222;border-radius:16px;padding:14px;text-align:center;font-weight:700;font-size:14px;box-shadow:0 10px 24px -12px rgba(0,0,0,.5)}
-.poll div{display:flex;gap:8px;margin-top:10px}.poll span{flex:1;border:1.5px solid #e3e3e3;border-radius:10px;padding:9px 4px;font-size:14px}
-/* carrusel 1 · estudio de estética */
-.k1{color:#fff}.k1::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,40,34,.05),rgba(58,40,34,.8))}
-.k1 b{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(26px,3vw,36px);line-height:1}
-.k1t{background:#EFE4DA;color:#3A2822}
-.k1t b{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(22px,2.4vw,28px);line-height:1.05}
-.k1t p{font-size:14px;opacity:.8}
-.k1t .pill,.k1 .pill{align-self:flex-start;background:#3A2822;color:#EFE4DA;padding:7px 14px;border-radius:2px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
-/* carrusel 2 · cafetería */
-.k2{background:#2B1A10;color:#F4E9DC}
-.k2 b{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(24px,2.8vw,34px);line-height:1}
-.k2.ph{color:#fff}.k2.ph::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,26,16,.75),rgba(43,26,16,.1) 55%)}
-.k2 p{font-size:14px;opacity:.85}
-.k2 .pill{align-self:flex-start;background:#9EC1D9;color:#2B1A10;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:700}
-/* historias */
-.st1::before{background:linear-gradient(180deg,rgba(30,34,38,.55),rgba(30,34,38,.05) 40%,rgba(30,34,38,.75))}
-.st1 b{font-family:"DM Serif Display",serif;font-weight:400;font-size:clamp(30px,3.4vw,40px);line-height:1}
-.st2::before{background:linear-gradient(180deg,rgba(214,51,108,.2),rgba(214,51,108,.88))}
-.st2 b{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(24px,2.4vw,30px);line-height:1;letter-spacing:-.02em}
-.count{background:#fff;color:#D6336C;border-radius:16px;padding:12px 14px;font-weight:800;font-family:"Syne",sans-serif;text-align:center}
-.count small{display:block;color:#555;font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
-.stories{display:grid;gap:22px;grid-template-columns:1fr 1fr}
 
 /* auditoría gratis */
 .audit{background:var(--terra);color:var(--cream);border-radius:48px}
@@ -335,9 +285,9 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
       <p class="note">Entrega en hasta 72 horas desde que recibo tu material. ¿Quieres empezar por algo gratis? <a href="#auditoria">Pide tu mini auditoría de Instagram</a>.</p>
     </div>
     <div class="stack" aria-hidden="true">
-      <div class="card c1 photo" style="background-image:url(mascarilla.jpg)"><small>Limpieza facial</small><b>Una pausa para tu piel.</b><i>Reserva tu cita</i></div>
-      <div class="card c2 photo" style="background-image:url(cejas.jpg)"><small>Servicio</small><b>Laminado de cejas.</b><i>Pide tu cita</i></div>
-      <div class="card c3 photo" style="background-image:url(cafe.jpg)"><small>Este fin de semana</small><b>Brunch en Café Brote.</b><i>Ven a probarlo</i></div>
+      <div class="card c1"><small>Limpieza facial</small><b>Una pausa para tu piel.</b><i>Reserva tu cita</i></div>
+      <div class="card c2"><small>Servicio</small><b>Laminado de cejas.</b><i>Pide tu cita</i></div>
+      <div class="card c3"><small>Este fin de semana</small><b>Brunch en Café Brote.</b><i>Ven a probarlo</i></div>
     </div>
   </div>
 </section>
@@ -437,53 +387,8 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
         <div><b>Piso luminoso<br>en el centro</b><p>3 hab · 2 baños · 95 m²</p></div>
         <span class="pill">Agenda tu visita</span><span class="tag">Muestra conceptual</span>
       </article>
-      <article class="tile s-carrusel rv">
-        <div class="circle" style="background-image:url(brocha.jpg)"></div>
-        <small>Maquilladora · Carrusel</small>
-        <div><b>Tu piel,<br><i>tu mejor base</i></b><p>5 pasos antes del maquillaje</p><div class="slides"><i></i><i></i><i></i><i></i><i></i></div></div>
-        <span class="pill">Guárdalo</span><span class="tag">Muestra conceptual</span>
-      </article>
     </div>
     <p class="hint">¿Tu negocio es otro? Mi trabajo se adapta a cada sector.</p>
-
-    <div class="designs-head rv">
-      <h3>Carruseles e historias.</h3>
-      <p>Diseños completos, de la portada a la llamada a la acción. También son muestras conceptuales para negocios ficticios.</p>
-    </div>
-    <div class="designs">
-      <figure class="d-item rv" style="margin:0">
-        <div class="carousel">
-          <div class="sl k1" style="background-image:url(brocha.jpg)"><span class="num">1/3</span><b>3 señales de que tu piel pide una limpieza</b></div>
-          <div class="sl k1t"><span class="num">2/3</span><div><b>Poros más visibles, brillo en la zona T y maquillaje que no se fija.</b><p>Si te pasa alguna, es momento.</p></div><span></span></div>
-          <div class="sl k1t"><span class="num">3/3</span><b>Limpieza facial profunda · 60 min</b><span class="pill">Reserva tu cita</span></div>
-        </div>
-        <figcaption><b>Estudio de estética</b>Carrusel educativo de 3 diapositivas</figcaption>
-      </figure>
-      <figure class="d-item rv" style="margin:0">
-        <div class="story st1" style="background-image:url(toalla.jpg)">
-          <div class="bar"><i></i><i></i><i></i></div>
-          <b>¿Ya probaste el ritual de toalla caliente?</b>
-          <div class="poll">Cuéntame<div><span>Sí, me encanta</span><span>Todavía no</span></div></div>
-        </div>
-        <figcaption><b>Spa facial</b>Historia con encuesta</figcaption>
-      </figure>
-      <figure class="d-item rv" style="margin:0">
-        <div class="story st2" style="background-image:url(pilates.jpg)">
-          <div class="bar"><i></i><i></i></div>
-          <b>Quedan 2 plazas para el reformer del jueves</b>
-          <div class="count"><small>Clase de prueba</small>Jueves · 19:00</div>
-        </div>
-        <figcaption><b>Estudio de pilates</b>Historia con cuenta atrás</figcaption>
-      </figure>
-      <figure class="d-item rv" style="margin:0">
-        <div class="carousel">
-          <div class="sl k2 ph" style="background-image:url(cafe.jpg)"><b>Cómo pedir tu café como un barista</b><span class="num">1/3</span></div>
-          <div class="sl k2"><span class="num">2/3</span><div><b>Flat white</b><p>Doble espresso y leche cremosa. Más café que un latte.</p></div><div><b>Cortado</b><p>Espresso con un toque de leche.</p></div></div>
-          <div class="sl k2"><span class="num">3/3</span><b>¿Cuál es el tuyo?</b><span class="pill">Te lo preparamos</span></div>
-        </div>
-        <figcaption><b>Cafetería</b>Carrusel de 3 diapositivas</figcaption>
-      </figure>
-    </div>
   </div>
 </section>
 
