@@ -21,7 +21,7 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-section{padding:clamp(72px,11vw,140px) 0}
+section{padding:clamp(56px,7vw,96px) 0}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
 h1{font-size:clamp(46px,9vw,104px)}
 h2{font-size:clamp(36px,6vw,68px);max-width:15ch}
@@ -52,7 +52,7 @@ nav .btn{padding:10px 20px;font-size:14px}
 
 /* hero */
 .hero{padding-top:clamp(48px,8vw,96px);overflow:hidden}
-.hero-grid{display:grid;gap:56px;grid-template-columns:1.1fr .9fr;align-items:center}
+.hero-grid{max-width:860px}
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 .note{font-size:14px;color:var(--ink-70);margin-top:18px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
@@ -90,14 +90,15 @@ nav .btn{padding:10px 20px;font-size:14px}
 .ai b{font-weight:700}
 
 /* muestras */
-.samples-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
-.grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+.samples-head{margin-bottom:36px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.grid{grid-template-columns:1fr}}
 .tile{aspect-ratio:4/5;border-radius:var(--r);padding:8%;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:transform .35s}
 .tile:hover{transform:translateY(-6px) rotate(-.6deg)}
 .tile small{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.tile b{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1.02}
+.tile b{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,38px);line-height:1.02}
 .tile p{font-size:16px;opacity:.85}
 .tile .tag{position:absolute;bottom:14px;right:16px;font-size:10px;letter-spacing:.1em;opacity:.55;text-transform:uppercase;font-weight:700}
 .t-a{background:var(--sand)} .t-b{background:var(--terra);color:var(--cream)} .t-c{background:var(--ink);color:var(--cream)}
@@ -158,6 +159,15 @@ nav .btn{padding:10px 20px;font-size:14px}
 .s-carrusel b{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,5.6vw,62px)}
 .s-carrusel .pill{background:#2A1B4A;color:#CBB8F0}
 .tile .tag{z-index:1}
+/* 4 columnas: textos más chicos */
+@media(min-width:1001px){.grid .tile{padding:7%}.grid .tile b{font-size:clamp(24px,2.5vw,32px)!important}.grid .s-barber b{font-size:clamp(44px,4.6vw,60px)!important}.grid .s-moda b{font-size:clamp(30px,3vw,40px)!important}.grid .s-pilates b{font-size:clamp(20px,2vw,26px)!important}.grid .tile small{font-size:10px}.grid .s-barber small,.grid .s-barber p{font-size:15px}.grid .tile p{font-size:14px}}
+
+/* reels */
+.reels{display:grid;gap:18px;grid-template-columns:repeat(4,1fr);margin-top:18px}
+@media(max-width:1000px){.reels{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.reels{grid-template-columns:repeat(2,1fr)}}
+.reels .frame{aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:#000}
+.reels video{width:100%;height:100%;object-fit:cover;display:block}
 
 /* auditoría gratis */
 .audit{background:var(--terra);color:var(--cream);border-radius:48px}
@@ -193,7 +203,7 @@ nav .btn{padding:10px 20px;font-size:14px}
 
 /* planes */
 .plans{background:var(--sand);border-radius:48px 48px 0 0}
-.plan-grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:56px;align-items:center}
+.plan-grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:40px;align-items:center}
 @media(max-width:940px){.plan-grid{grid-template-columns:1fr}}
 .plan{background:var(--cream);border-radius:var(--r);padding:38px 34px;position:relative}
 .plan.hot{background:var(--terra);color:var(--cream);padding:48px 34px;box-shadow:0 30px 60px -30px rgba(185,106,82,.9)}
@@ -216,7 +226,7 @@ nav .btn{padding:10px 20px;font-size:14px}
 .mentoria .btn:hover{background:var(--cream);color:var(--ink)}
 
 /* pasos */
-.steps{display:grid;gap:22px;grid-template-columns:repeat(4,1fr);margin-top:56px}
+.steps{display:grid;gap:22px;grid-template-columns:repeat(4,1fr);margin-top:40px}
 @media(max-width:940px){.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.steps{grid-template-columns:1fr}}
 .step{border-top:2px solid var(--ink);padding-top:22px}
@@ -258,7 +268,6 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
       <a class="logo" href="#top">Meli<span>.</span></a>
       <ul>
         <li><a href="#muestras">Muestras</a></li>
-        <li><a href="#trabajo">Trabajo real</a></li>
         <li><a href="#auditoria">Auditoría gratis</a></li>
         <li><a href="#planes">Planes</a></li>
         <li><a href="#como">Cómo funciona</a></li>
@@ -284,11 +293,6 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
       </div>
       <p class="note">Entrega en hasta 72 horas desde que recibo tu material. ¿Quieres empezar por algo gratis? <a href="#auditoria">Pide tu mini auditoría de Instagram</a>.</p>
     </div>
-    <div class="stack" aria-hidden="true">
-      <div class="card c1"><small>Limpieza facial</small><b>Una pausa para tu piel.</b><i>Reserva tu cita</i></div>
-      <div class="card c2"><small>Servicio</small><b>Laminado de cejas.</b><i>Pide tu cita</i></div>
-      <div class="card c3"><small>Este fin de semana</small><b>Brunch en Café Brote.</b><i>Ven a probarlo</i></div>
-    </div>
   </div>
 </section>
 
@@ -307,7 +311,7 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
       <h2>Publicar cada semana lleva más tiempo del que parece.</h2>
       <p class="lead">Pensar la idea, diseñar, escribir el texto, editar el vídeo. Yo me encargo de esa parte para que tú sigas con tu negocio.</p>
     </div>
-    <div class="split" style="margin-top:56px">
+    <div class="split" style="margin-top:40px">
       <div class="box rv">
         <h3>Lo que hago</h3>
         <ul class="list">
@@ -341,110 +345,60 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
         <span class="eyebrow">Muestras</span>
         <h2>Así podría verse tu contenido.</h2>
       </div>
-      <p class="lead" style="margin:0">Proyectos conceptuales para negocios ficticios, hechos para mostrar mi estilo. No son trabajos para clientes reales.</p>
     </div>
     <div class="grid">
       <article class="tile s-estetica rv" style="background-image:url(mascarilla.jpg)">
         <small>Centro de estética · Post</small>
         <div><b>Una pausa<br><i>para tu piel</i></b><p>Limpieza facial · 60 min</p></div>
-        <span class="pill">Reserva tu cita</span><span class="tag">Muestra conceptual</span>
+        <span class="pill">Reserva tu cita</span>
       </article>
       <article class="tile s-barber rv" style="background-image:url(barberia.jpg)">
         <small>Barbería · Post</small>
         <div><b>FADE<br>+ BARBA</b><p>Martes a sábado · 10 a 20 h</p></div>
-        <span class="pill">Reserva online</span><span class="tag">Muestra conceptual</span>
+        <span class="pill">Reserva online</span>
       </article>
       <article class="tile s-cafe rv" style="background-image:url(cafe.jpg)">
         <small>Cafetería · Historia</small>
         <div><b>Tu café<br><i>de las diez.</i></b><p>Flat white + tostada del día</p></div>
-        <span class="pill">Te esperamos</span><span class="tag">Muestra conceptual</span>
+        <span class="pill">Te esperamos</span>
       </article>
       <article class="tile s-moda rv">
         <div class="img" style="background-image:url(moda.jpg)"></div>
         <small>Tienda de ropa · Post</small>
         <div><b>LO<br>NUEVO</b><p>Tonos tierra · Otoño</p></div>
-        <span class="pill">Ver en tienda →</span><span class="tag">Muestra conceptual</span>
+        <span class="pill">Ver en tienda →</span>
       </article>
       <article class="tile s-pilates rv" style="background-image:url(pilates.jpg)">
         <small>Estudio de pilates · Post</small>
         <div><b>Prueba<br>el reformer</b><p>Grupos reducidos · todos los niveles</p></div>
-        <span class="pill">Prueba una clase</span><span class="tag">Muestra conceptual</span>
+        <span class="pill">Prueba una clase</span>
       </article>
       <article class="tile s-unas rv">
         <div class="circle" style="background-image:url(unas-foto.jpg)"></div>
         <small>Salón de uñas · Post</small>
         <div><b><i>Nude</i> que combina<br>con todo</b><p>Esmaltado semipermanente</p></div>
-        <span class="pill">Pide tu cita</span><span class="tag">Muestra conceptual</span>
+        <span class="pill">Pide tu cita</span>
       </article>
       <article class="tile s-cosmetica rv" style="background-image:url(cosmetica.jpg)">
         <small>Ecommerce de cosmética · Post</small>
         <div><b>Sérum Calma</b><p>30 ml · piel sensible</p></div>
-        <span class="pill">Comprar ahora</span><span class="tag">Muestra conceptual</span>
-      </article>
-      <article class="tile s-inmo rv">
-        <div class="img" style="background-image:url(inmo.jpg)"></div>
-        <small>Inmobiliaria · Post</small>
-        <div><b>Piso luminoso<br>en el centro</b><p>3 hab · 2 baños · 95 m²</p></div>
-        <span class="pill">Agenda tu visita</span><span class="tag">Muestra conceptual</span>
+        <span class="pill">Comprar ahora</span>
       </article>
     </div>
-    <p class="hint">¿Tu negocio es otro? Mi trabajo se adapta a cada sector.</p>
-  </div>
-</section>
-
-<!-- TRABAJO REAL -->
-<section id="trabajo" class="real">
-  <div class="wrap real-wrap">
-    <div class="rv">
-      <span class="eyebrow">Trabajo real</span>
-      <h2>Reels que ya edité.</h2>
-      <p class="lead">Edición de vídeo para centros de belleza, a partir del material que graba cada negocio.</p>
-      <ul class="list">
-        <li>Cortes al ritmo de la música</li>
-        <li>Un título claro desde el primer segundo</li>
-        <li>Formato vertical listo para Instagram y TikTok</li>
-      </ul>
-    </div>
-    <div class="real-grid">
-      <figure class="work rv">
-        <div class="frame"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video></div>
-        <figcaption><b>Laminado de cejas</b><span>Reel · edición de vídeo</span></figcaption>
-      </figure>
-      <figure class="work rv">
-        <div class="frame"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video></div>
-        <figcaption><b>Uñas esculpidas</b><span>Reel · edición de vídeo</span></figcaption>
-      </figure>
+    <div class="reels rv" id="trabajo">
+      <div class="frame"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none" aria-label="Reel de laminado de cejas"></video></div>
+      <div class="frame"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none" aria-label="Reel de uñas esculpidas"></video></div>
     </div>
   </div>
 </section>
 
 <!-- AUDITORÍA GRATIS -->
-<section id="auditoria" class="audit" style="margin-top:22px">
+<section id="auditoria" class="audit">
   <div class="wrap">
     <div class="rv">
       <span class="eyebrow">Gratis</span>
       <h2>Mini auditoría de tu Instagram.</h2>
       <p class="lead">Miro tu perfil y te digo qué está funcionando y qué está fallando. Sin coste y sin compromiso.</p>
-    </div>
-    <div class="audit-grid">
-      <div class="box rv">
-        <h3>Lo que reviso</h3>
-        <ul class="list">
-          <li>Foto de perfil, nombre y biografía</li>
-          <li>Historias destacadas</li>
-          <li>Tus últimas 9 publicaciones</li>
-          <li>Textos y llamadas a la acción</li>
-          <li>Qué formatos usas y cada cuánto publicas</li>
-        </ul>
-      </div>
-      <div class="box solid rv">
-        <h3>Lo que recibes</h3>
-        <ul class="list">
-          <li>3 cosas que ya están bien</li>
-          <li>3 cosas para mejorar y cómo hacerlo</li>
-          <li>Una idea de contenido para empezar esta semana</li>
-        </ul>
-      </div>
     </div>
     <div class="cta-row rv">
       <a class="btn" href="#" data-contact="audit">Pedir mi auditoría gratis</a>
@@ -578,7 +532,7 @@ const io = new IntersectionObserver(es=>es.forEach(e=>{
 const vio = new IntersectionObserver(es=>es.forEach(e=>{
   e.isIntersecting ? e.target.play().catch(()=>{}) : e.target.pause();
 }),{threshold:.4});
-document.querySelectorAll(".work video").forEach(v=>vio.observe(v));
+document.querySelectorAll(".reels video").forEach(v=>vio.observe(v));
 document.querySelectorAll(".rv").forEach((el,i)=>{ el.style.transitionDelay = (i%3)*80+"ms"; io.observe(el); });
 </script>
 </body>
