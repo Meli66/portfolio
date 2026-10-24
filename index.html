@@ -191,7 +191,7 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
     <div>
       <span class="eyebrow">Contenido para negocios</span>
       <h1>Tu mes de contenido, <em>listo</em> para publicar.</h1>
-      <p class="lead">Creo y edito posts, carruseles, historias y reels para tus redes, con tus fotos y tu estilo. Tú publicas; yo me ocupo del resto.</p>
+      <p class="lead">Creo y edito posts, carruseles, historias y reels para tus redes, con tus fotos y tu estilo. Tú publicas; yo me ocupo del resto y te guío para programarlo.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="#contacto">Quiero mi mes de contenido</a>
         <a class="btn btn-ghost" href="#muestras">Ver muestras</a>
@@ -230,12 +230,13 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
           <li>Reels editados con tus vídeos</li>
           <li>Textos con llamada a la acción</li>
           <li>Calendario mensual de contenido</li>
+          <li>Guion para tus reels y guía paso a paso para programar tus publicaciones</li>
         </ul>
       </div>
       <div class="box dark rv">
         <h3>Lo que no hago</h3>
         <ul class="list">
-          <li>No publico en tus cuentas</li>
+          <li>No publico directamente en tus cuentas</li>
           <li>No respondo mensajes ni comentarios</li>
           <li>No gestiono publicidad</li>
           <li>No grabo en tu local</li>
@@ -315,7 +316,7 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
         </ul>
       </article>
     </div>
-    <p class="plans-note rv">Tú facilitas fotos, vídeos, información de tu negocio y precios. Incluye una ronda de ajustes por entrega. No incluye publicación, gestión de mensajes, publicidad ni grabación presencial.</p>
+    <p class="plans-note rv">Tú facilitas fotos, vídeos, información de tu negocio y precios. Incluye una ronda de ajustes por entrega. No incluye publicación directa en tus cuentas, gestión de mensajes, publicidad ni grabación presencial.</p>
 
     <div class="mentoria rv">
       <div>
@@ -337,7 +338,7 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
     </div>
     <div class="steps">
       <div class="step rv"><div class="n">1</div><h3>Hablamos</h3><p>Una llamada breve para conocer tu negocio y elegir el plan.</p></div>
-      <div class="step rv"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información de tu negocio y precios.</p></div>
+      <div class="step rv"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información de tu negocio y precios. Para los reels te paso el guion y tú grabas.</p></div>
       <div class="step rv"><div class="n">3</div><h3>Preparo tu mes</h3><p>Entrega en hasta 72 horas desde que tengo todo.</p></div>
       <div class="step rv"><div class="n">4</div><h3>Recibes y ajustamos</h3><p>Archivos listos para publicar, con una ronda de ajustes.</p></div>
     </div>
@@ -349,8 +350,9 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
   <div class="wrap">
     <div class="rv"><span class="eyebrow">Preguntas</span><h2>Lo que suelen preguntarme.</h2></div>
     <div class="faq rv">
-      <details><summary>¿Publicas por mí?</summary><p>No. Te entrego los archivos y los textos listos y tú los publicas cuando quieras.</p></details>
+      <details><summary>¿Publicas por mí?</summary><p>No publico directamente en tus cuentas. Te entrego los archivos y los textos listos, y te guío paso a paso para que dejes todo programado.</p></details>
       <details><summary>¿Qué necesito enviarte?</summary><p>Fotos, vídeos, información de tu negocio y los precios de tus servicios.</p></details>
+      <details><summary>¿Cómo funcionan los reels?</summary><p>Te paso un guion para cada reel, tú grabas y me envías los vídeos para que los edite.</p></details>
       <details><summary>¿Desde cuándo cuentan las 72 horas?</summary><p>Desde que recibo todo el material necesario, siempre que el volumen acordado permita cumplirlo.</p></details>
       <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por cada entrega.</p></details>
       <details><summary>¿Puedo usar un plan para dos marcas?</summary><p>No. Cada plan es para una marca.</p></details>
@@ -368,8 +370,6 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
     <p class="lead">Cuéntame qué tipo de negocio tienes y coordinamos una llamada breve. Sin compromiso.</p>
     <div class="cta-row">
       <a class="btn btn-solid" href="#" data-contact="wa">Escribir por WhatsApp</a>
-      <a class="btn btn-ghost" href="#" data-contact="mail">Enviar un email</a>
-      <a class="btn btn-ghost" href="#" data-contact="ig">Ver mi Instagram</a>
     </div>
   </div>
 </section>
@@ -380,20 +380,10 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
 </footer>
 
 <script>
-/* ===== COMPLETA ESTOS 3 DATOS ===== */
-const WHATSAPP  = "";   // número con prefijo, sin + ni espacios. Ej: 34600111222
-const EMAIL     = "";   // Ej: hola@tuemail.com
-const INSTAGRAM = "";   // Ej: https://instagram.com/tuusuario
-/* ================================== */
-
-const links = {
-  wa:   WHATSAPP  ? "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Meli, vi tu portafolio y quiero hablar de mi contenido") : "#contacto",
-  mail: EMAIL     ? "mailto:" + EMAIL : "#contacto",
-  ig:   INSTAGRAM || "#contacto"
-};
+const WHATSAPP = "34644888144";
+const waLink = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Meli, vi tu portafolio y quiero hablar de mi contenido");
 document.querySelectorAll("[data-contact]").forEach(a=>{
-  a.href = links[a.dataset.contact];
-  if(a.href.startsWith("http")) { a.target="_blank"; a.rel="noopener"; }
+  a.href = waLink; a.target = "_blank"; a.rel = "noopener";
 });
 
 const io = new IntersectionObserver(es=>es.forEach(e=>{
