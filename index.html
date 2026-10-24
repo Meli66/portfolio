@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meli · Contenido para redes de negocios</title>
+<meta name="description" content="Creo y edito contenido para redes sociales de negocios: posts, carruseles, historias y reels, listos para publicar.">
+<meta name="theme-color" content="#F6F1EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6F1EA; --ink:#1E1B18; --terra:#D4826A; --terra-d:#B96A52; --sand:#E9DFD3; --ink-70:rgba(30,27,24,.7);
+  --serif:"DM Serif Display",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
+  --r:28px; --gutter:clamp(20px,5vw,56px); --max:1120px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+section{padding:clamp(72px,11vw,140px) 0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h1{font-size:clamp(46px,9vw,104px)}
+h2{font-size:clamp(36px,6vw,68px);max-width:15ch}
+h3{font-size:30px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-d);margin-bottom:20px}
+.lead{font-size:clamp(18px,2.2vw,22px);color:var(--ink-70);max-width:46ch;margin-top:24px}
+em{font-style:italic;color:var(--terra)}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--terra);border-color:var(--terra);color:var(--cream)}
+.btn-solid:hover{background:var(--terra-d);border-color:var(--terra-d)}
+.btn-ghost{background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(246,241,234,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(30,27,24,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:26px;text-decoration:none}
+.logo span{color:var(--terra)}
+nav ul{display:flex;gap:28px;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-size:15px;font-weight:500}
+nav ul a:hover{color:var(--terra-d)}
+nav .btn{padding:10px 20px;font-size:14px}
+@media(max-width:760px){nav ul{display:none}}
+
+/* hero */
+.hero{padding-top:clamp(48px,8vw,96px);overflow:hidden}
+.hero-grid{display:grid;gap:56px;grid-template-columns:1.1fr .9fr;align-items:center}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.note{font-size:14px;color:var(--ink-70);margin-top:18px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.stack{position:relative;height:clamp(380px,56vw,540px)}
+.card{position:absolute;width:56%;aspect-ratio:4/5;border-radius:22px;padding:7%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 24px 50px -24px rgba(30,27,24,.45);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card small{font-size:clamp(9px,1.4vw,12px);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.card b{font-family:var(--serif);font-weight:400;font-size:clamp(22px,3.6vw,38px);line-height:1.02}
+.card i{font-style:normal;align-self:flex-start;font-size:clamp(10px,1.4vw,13px);font-weight:700;padding:7px 14px;border-radius:999px}
+.c1{background:var(--terra);color:var(--cream);left:0;top:8%;transform:rotate(-6deg)}
+.c1 i{background:var(--cream);color:var(--ink)}
+.c2{background:var(--sand);right:2%;top:0;transform:rotate(4deg);z-index:2}
+.c2 i{background:var(--terra);color:var(--cream)}
+.c3{background:var(--ink);color:var(--cream);left:22%;bottom:0;transform:rotate(-1.5deg);z-index:3}
+.c3 i{background:var(--cream);color:var(--ink)}
+.stack:hover .c1{transform:rotate(-9deg) translateX(-10px)}
+.stack:hover .c2{transform:rotate(7deg) translateX(10px)}
+
+/* marquee */
+.marquee{background:var(--ink);color:var(--cream);overflow:hidden;padding:18px 0;white-space:nowrap}
+.marquee div{display:inline-block;animation:slide 32s linear infinite;font-family:var(--serif);font-size:26px}
+.marquee span{margin:0 26px;color:var(--terra)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* qué hago */
+.split{display:grid;gap:56px;grid-template-columns:1fr 1fr;align-items:start}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.list{list-style:none;padding:0;margin-top:28px;display:grid;gap:14px}
+.list li{display:flex;gap:14px;align-items:flex-start;font-size:18px}
+.list li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--terra);margin-top:.6em}
+.box{background:var(--sand);border-radius:var(--r);padding:36px}
+.box.dark{background:var(--ink);color:var(--cream)}
+.box.dark .list li::before{background:var(--cream);opacity:.5}
+.box h3{font-size:28px;margin-bottom:6px}
+.ai{margin-top:32px;padding:22px 26px;border:2px dashed rgba(30,27,24,.25);border-radius:20px;font-size:16px}
+.ai b{font-weight:700}
+
+/* muestras */
+.samples-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.tile{aspect-ratio:4/5;border-radius:var(--r);padding:8%;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:transform .35s}
+.tile:hover{transform:translateY(-6px) rotate(-.6deg)}
+.tile small{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.tile b{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1.02}
+.tile p{font-size:16px;opacity:.85}
+.tile .tag{position:absolute;bottom:14px;right:16px;font-size:10px;letter-spacing:.1em;opacity:.55;text-transform:uppercase;font-weight:700}
+.t-a{background:var(--sand)} .t-b{background:var(--terra);color:var(--cream)} .t-c{background:var(--ink);color:var(--cream)}
+.t-d{background:#EDE3D6} .t-e{background:#C9705A;color:var(--cream)} .t-f{background:var(--cream);border:2px solid var(--ink)}
+.tile .pill{align-self:flex-start;background:var(--ink);color:var(--cream);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:700}
+.t-b .pill,.t-c .pill,.t-e .pill{background:var(--cream);color:var(--ink)}
+.slides{display:flex;gap:6px;margin-top:10px}.slides i{width:26px;height:4px;border-radius:2px;background:currentColor;opacity:.3}.slides i:first-child{opacity:1}
+.hint{margin-top:30px;font-size:15px;color:var(--ink-70)}
+
+/* planes */
+.plans{background:var(--sand);border-radius:48px 48px 0 0}
+.plan-grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:56px;align-items:center}
+@media(max-width:940px){.plan-grid{grid-template-columns:1fr}}
+.plan{background:var(--cream);border-radius:var(--r);padding:38px 34px;position:relative}
+.plan.hot{background:var(--terra);color:var(--cream);padding:48px 34px;box-shadow:0 30px 60px -30px rgba(185,106,82,.9)}
+@media(min-width:941px){.plan.hot{transform:scale(1.05)}}
+.badge{position:absolute;top:-14px;left:34px;background:var(--ink);color:var(--cream);font-size:12px;font-weight:700;letter-spacing:.12em;padding:7px 14px;border-radius:999px}
+.plan h3{font-size:34px}
+.for{font-size:15px;opacity:.75;margin-top:4px}
+.price{font-family:var(--serif);font-size:72px;line-height:1;margin:22px 0 6px}
+.price small{font-family:var(--sans);font-size:16px;opacity:.7}
+.plan ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:11px;font-size:17px}
+.plan li{display:flex;gap:10px}.plan li::before{content:"✓";font-weight:700;color:var(--terra)}
+.plan.hot li::before{color:var(--cream)}
+.plan li.off{opacity:.4}.plan li.off::before{content:"–";color:inherit}
+.plans-note{margin-top:34px;font-size:15px;color:var(--ink-70);max-width:70ch}
+.mentoria{margin-top:40px;background:var(--ink);color:var(--cream);border-radius:var(--r);padding:clamp(28px,5vw,52px);display:grid;gap:24px;grid-template-columns:1.2fr .8fr;align-items:center}
+@media(max-width:800px){.mentoria{grid-template-columns:1fr}}
+.mentoria h3{font-size:clamp(30px,4vw,44px)}
+.mentoria p{opacity:.8;margin-top:12px}
+.mentoria .btn{border-color:var(--cream);color:var(--cream);justify-self:start}
+.mentoria .btn:hover{background:var(--cream);color:var(--ink)}
+
+/* pasos */
+.steps{display:grid;gap:22px;grid-template-columns:repeat(4,1fr);margin-top:56px}
+@media(max-width:940px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{border-top:2px solid var(--ink);padding-top:22px}
+.step .n{font-family:var(--serif);font-size:72px;line-height:1;color:var(--terra)}
+.step h3{font-size:26px;margin:10px 0 8px}
+.step p{font-size:16px;color:var(--ink-70)}
+
+/* faq */
+.faq{max-width:760px;margin-top:48px}
+details{border-bottom:1px solid rgba(30,27,24,.18);padding:22px 0}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;line-height:1;color:var(--terra);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px;color:var(--ink-70);font-size:17px;max-width:60ch}
+
+/* contacto */
+.contact{background:var(--ink);color:var(--cream);text-align:center;border-radius:48px 48px 0 0}
+.contact h2{max-width:none;margin:0 auto}
+.contact .lead{margin:24px auto 0;color:rgba(246,241,234,.75)}
+.contact .cta-row{justify-content:center}
+.contact .btn-ghost{border-color:var(--cream);color:var(--cream)}
+.contact .btn-ghost:hover{background:var(--cream);color:var(--ink)}
+footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;padding:0 0 40px;font-size:14px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.marquee div{animation:none}.card,.tile,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Principal">
+      <a class="logo" href="#top">Meli<span>.</span></a>
+      <ul>
+        <li><a href="#muestras">Muestras</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#como">Cómo funciona</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+      <a class="btn btn-solid" href="#contacto" data-contact="wa">Escríbeme</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- PORTADA -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Contenido para negocios</span>
+      <h1>Tu mes de contenido, <em>listo</em> para publicar.</h1>
+      <p class="lead">Creo y edito posts, carruseles, historias y reels para tus redes, con tus fotos y tu estilo. Tú publicas; yo me ocupo del resto.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#contacto">Quiero mi mes de contenido</a>
+        <a class="btn btn-ghost" href="#muestras">Ver muestras</a>
+      </div>
+      <p class="note">Entrega en hasta 72 horas desde que recibo tu material.</p>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <div class="card c1"><small>Limpieza facial</small><b>Una pausa para tu piel.</b><i>Reserva tu cita</i></div>
+      <div class="card c2"><small>Servicio</small><b>Laminado de cejas.</b><i>Pide tu cita</i></div>
+      <div class="card c3"><small>Este fin de semana</small><b>Brunch en Café Brote.</b><i>Ven a probarlo</i></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div>
+    Posts <span>✦</span> Carruseles <span>✦</span> Historias <span>✦</span> Reels <span>✦</span> Textos con llamada a la acción <span>✦</span> Calendario de contenido <span>✦</span>
+    Posts <span>✦</span> Carruseles <span>✦</span> Historias <span>✦</span> Reels <span>✦</span> Textos con llamada a la acción <span>✦</span> Calendario de contenido <span>✦</span>
+  </div>
+</div>
+
+<!-- QUÉ HAGO -->
+<section id="que-hago">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Qué hago</span>
+      <h2>Publicar cada semana lleva más tiempo del que parece.</h2>
+      <p class="lead">Pensar la idea, diseñar, escribir el texto, editar el vídeo. Yo me encargo de esa parte para que tú sigas con tu negocio.</p>
+    </div>
+    <div class="split" style="margin-top:56px">
+      <div class="box rv">
+        <h3>Lo que hago</h3>
+        <ul class="list">
+          <li>Posts y carruseles con tu identidad visual</li>
+          <li>Historias listas para subir</li>
+          <li>Reels editados con tus vídeos</li>
+          <li>Textos con llamada a la acción</li>
+          <li>Calendario mensual de contenido</li>
+        </ul>
+      </div>
+      <div class="box dark rv">
+        <h3>Lo que no hago</h3>
+        <ul class="list">
+          <li>No publico en tus cuentas</li>
+          <li>No respondo mensajes ni comentarios</li>
+          <li>No gestiono publicidad</li>
+          <li>No grabo en tu local</li>
+        </ul>
+      </div>
+    </div>
+    <p class="ai rv"><b>Cómo trabajo:</b> creo y edito con ayuda de herramientas de IA y cada pieza pasa por mi revisión. Así llego rápido sin que el contenido pierda tu estilo.</p>
+  </div>
+</section>
+
+<!-- MUESTRAS -->
+<section id="muestras" style="padding-top:0">
+  <div class="wrap">
+    <div class="samples-head rv">
+      <div>
+        <span class="eyebrow">Muestras</span>
+        <h2>Así podría verse tu contenido.</h2>
+      </div>
+      <p class="lead" style="margin:0">Proyectos conceptuales para negocios ficticios, hechos para mostrar mi estilo. No son trabajos para clientes reales.</p>
+    </div>
+    <div class="grid">
+      <article class="tile t-a rv"><small>Limpieza facial</small><div><b>Una pausa para tu piel.</b><p style="margin-top:12px">Sesión de 60 minutos con cuidado personalizado.</p></div><span class="pill">Reserva tu cita</span><span class="tag">Muestra conceptual</span></article>
+      <article class="tile t-b rv"><small>Carrusel · 1/3</small><div><b>3 hábitos sencillos para cuidar tu piel.</b><div class="slides"><i></i><i></i><i></i></div></div><span class="pill">Desliza →</span><span class="tag">Muestra conceptual</span></article>
+      <article class="tile t-c rv"><small>Servicio</small><div><b>Laminado de cejas.</b><p style="margin-top:12px">Cejas peinadas y definidas, sin rehacerlas cada mañana.</p></div><span class="pill">Pide tu cita</span><span class="tag">Muestra conceptual</span></article>
+      <article class="tile t-d rv"><small>Reel · 9:16</small><div><b>Así es una limpieza facial.</b><p style="margin-top:12px">Gancho, 3 pasos y cierre con texto en pantalla.</p></div><span class="pill">▶ 20 s</span><span class="tag">Muestra conceptual</span></article>
+      <article class="tile t-e rv"><small>Historia</small><div><b>Hoy hay agenda abierta.</b><p style="margin-top:12px">Citas disponibles esta semana.</p></div><span class="pill">Escríbenos</span><span class="tag">Muestra conceptual</span></article>
+      <article class="tile t-f rv"><small>Este fin de semana</small><div><b>Brunch en Café Brote.</b><p style="margin-top:12px">Sábados y domingos · 10:00 a 14:00</p></div><span class="pill">Ven a probarlo</span><span class="tag">Muestra conceptual</span></article>
+    </div>
+    <p class="hint">¿Tu negocio es otro? Mi trabajo se adapta a cada sector.</p>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes" class="plans">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Planes</span>
+      <h2>Tres formas de tener tu contenido al día.</h2>
+      <p class="lead">Precios mensuales. Un plan por marca.</p>
+    </div>
+    <div class="plan-grid">
+      <article class="plan rv">
+        <h3>Esencial</h3><p class="for">Para empezar con orden</p>
+        <div class="price">49 €<small> /mes</small></div>
+        <ul>
+          <li>4 posts o carruseles</li>
+          <li>4 historias</li>
+          <li>2 reels</li>
+          <li>Textos con llamada a la acción</li>
+          <li class="off">Calendario mensual</li>
+          <li class="off">Optimización de biografía</li>
+        </ul>
+      </article>
+      <article class="plan hot rv">
+        <span class="badge">RECOMENDADO</span>
+        <h3>Activo</h3><p class="for">Para mantener el ritmo</p>
+        <div class="price">89 €<small> /mes</small></div>
+        <ul>
+          <li>8 posts o carruseles</li>
+          <li>8 historias</li>
+          <li>4 reels</li>
+          <li>Textos con llamada a la acción</li>
+          <li>Calendario mensual</li>
+          <li class="off">Optimización de biografía</li>
+        </ul>
+      </article>
+      <article class="plan rv">
+        <h3>Plus</h3><p class="for">Para tener todo cubierto</p>
+        <div class="price">139 €<small> /mes</small></div>
+        <ul>
+          <li>12 posts o carruseles</li>
+          <li>12 historias</li>
+          <li>6 reels</li>
+          <li>Textos con llamada a la acción</li>
+          <li>Calendario mensual</li>
+          <li>Optimización de biografía de Instagram</li>
+        </ul>
+      </article>
+    </div>
+    <p class="plans-note rv">Tú facilitas fotos, vídeos, información de tu negocio y precios. Incluye una ronda de ajustes por entrega. No incluye publicación, gestión de mensajes, publicidad ni grabación presencial.</p>
+
+    <div class="mentoria rv">
+      <div>
+        <span class="eyebrow" style="color:var(--terra)">Extra</span>
+        <h3>Mentoría de redes sociales</h3>
+        <p>Entiende cómo funcionan Instagram y TikTok, cómo se crea contenido y qué hace cada formato. Para que decidas con criterio qué publicar.</p>
+      </div>
+      <a class="btn" href="#contacto" data-contact="wa">Consulta el precio</a>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>De tu material a tu mes de contenido, en 4 pasos.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">1</div><h3>Hablamos</h3><p>Una llamada breve para conocer tu negocio y elegir el plan.</p></div>
+      <div class="step rv"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información de tu negocio y precios.</p></div>
+      <div class="step rv"><div class="n">3</div><h3>Preparo tu mes</h3><p>Entrega en hasta 72 horas desde que tengo todo.</p></div>
+      <div class="step rv"><div class="n">4</div><h3>Recibes y ajustamos</h3><p>Archivos listos para publicar, con una ronda de ajustes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Preguntas</span><h2>Lo que suelen preguntarme.</h2></div>
+    <div class="faq rv">
+      <details><summary>¿Publicas por mí?</summary><p>No. Te entrego los archivos y los textos listos y tú los publicas cuando quieras.</p></details>
+      <details><summary>¿Qué necesito enviarte?</summary><p>Fotos, vídeos, información de tu negocio y los precios de tus servicios.</p></details>
+      <details><summary>¿Desde cuándo cuentan las 72 horas?</summary><p>Desde que recibo todo el material necesario, siempre que el volumen acordado permita cumplirlo.</p></details>
+      <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por cada entrega.</p></details>
+      <details><summary>¿Puedo usar un plan para dos marcas?</summary><p>No. Cada plan es para una marca.</p></details>
+      <details><summary>¿Trabajas con IA?</summary><p>Sí. Uso herramientas de IA para crear y editar, y reviso cada pieza antes de entregarla.</p></details>
+      <details><summary>¿Grabas en mi local o gestionas anuncios y mensajes?</summary><p>No. Me centro en crear y editar tu contenido con el material que me envías.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--terra)">Contacto</span>
+    <h2>Hablemos de tu contenido.</h2>
+    <p class="lead">Cuéntame qué tipo de negocio tienes y coordinamos una llamada breve. Sin compromiso.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#" data-contact="wa">Escribir por WhatsApp</a>
+      <a class="btn btn-ghost" href="#" data-contact="mail">Enviar un email</a>
+      <a class="btn btn-ghost" href="#" data-contact="ig">Ver mi Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Meli · Creación y edición de contenido para negocios · España y Argentina</p>
+</footer>
+
+<script>
+/* ===== COMPLETA ESTOS 3 DATOS ===== */
+const WHATSAPP  = "";   // número con prefijo, sin + ni espacios. Ej: 34600111222
+const EMAIL     = "";   // Ej: hola@tuemail.com
+const INSTAGRAM = "";   // Ej: https://instagram.com/tuusuario
+/* ================================== */
+
+const links = {
+  wa:   WHATSAPP  ? "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Meli, vi tu portafolio y quiero hablar de mi contenido") : "#contacto",
+  mail: EMAIL     ? "mailto:" + EMAIL : "#contacto",
+  ig:   INSTAGRAM || "#contacto"
+};
+document.querySelectorAll("[data-contact]").forEach(a=>{
+  a.href = links[a.dataset.contact];
+  if(a.href.startsWith("http")) { a.target="_blank"; a.rel="noopener"; }
+});
+
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+}),{threshold:.12});
+document.querySelectorAll(".rv").forEach((el,i)=>{ el.style.transitionDelay = (i%3)*80+"ms"; io.observe(el); });
+</script>
+</body>
+</html>
