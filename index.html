@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meli · Contenido para redes de negocios</title>
-<meta name="description" content="Creo y edito contenido para redes sociales de negocios: posts, carruseles, historias y reels, listos para publicar.">
-<meta name="theme-color" content="#F6F1EA">
+<meta name="description" content="Estrategia y contenido para redes de negocios: posts, carruseles, historias y reels, planificados mes a mes.">
+<meta name="theme-color" content="#1E1B18">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Bebas+Neue&family=Fraunces:ital,wght@0,600;1,600&family=Archivo+Black&family=Syne:wght@800&family=Playfair+Display:ital,wght@0,600;1,600&family=Space+Grotesk:wght@700&family=Manrope:wght@800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -21,84 +21,103 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-section{padding:clamp(56px,7vw,96px) 0}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
-h1{font-size:clamp(46px,9vw,104px)}
-h2{font-size:clamp(36px,6vw,68px);max-width:15ch}
-h3{font-size:30px}
-.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-d);margin-bottom:20px}
-.lead{font-size:clamp(18px,2.2vw,22px);color:var(--ink-70);max-width:46ch;margin-top:24px}
-em{font-style:italic;color:var(--terra)}
+section{padding:clamp(72px,11vw,136px) 0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5.6vw,64px);max-width:16ch}
+h3{font-size:28px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lead{font-size:clamp(18px,2.1vw,21px);color:var(--ink-70);max-width:48ch;margin-top:22px}
+em{font-style:italic}
 :focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+.kicker{display:block;font-size:15px;color:var(--terra-d);font-weight:700;margin-bottom:16px}
 
-/* botones */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s;cursor:pointer;background:transparent;color:inherit;font-family:inherit}
 .btn:hover{transform:translateY(-2px)}
 .btn-solid{background:var(--terra);border-color:var(--terra);color:var(--cream)}
 .btn-solid:hover{background:var(--terra-d);border-color:var(--terra-d)}
-.btn-ghost{background:transparent}
 .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.dark .btn-ghost{border-color:var(--cream)}
+.dark .btn-ghost:hover{background:var(--cream);color:var(--ink)}
 
-/* nav */
-header{position:sticky;top:0;z-index:20;background:rgba(246,241,234,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(30,27,24,.08)}
-nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+header{position:sticky;top:0;z-index:30;background:rgba(30,27,24,.82);backdrop-filter:blur(14px);color:var(--cream)}
+nav{display:flex;align-items:center;justify-content:space-between;height:66px}
 .logo{font-family:var(--serif);font-size:26px;text-decoration:none}
 .logo span{color:var(--terra)}
-nav ul{display:flex;gap:28px;list-style:none;padding:0}
-nav ul a{text-decoration:none;font-size:15px;font-weight:500}
-nav ul a:hover{color:var(--terra-d)}
-nav .btn{padding:10px 20px;font-size:14px}
-@media(max-width:760px){nav ul{display:none}}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-size:15px;font-weight:500;opacity:.85}
+nav ul a:hover{opacity:1;color:var(--terra)}
+nav .btn{padding:10px 20px;font-size:14px;color:var(--cream)}
+@media(max-width:920px){nav ul{display:none}}
 
-/* hero */
-.hero{padding-top:clamp(48px,8vw,96px);overflow:hidden}
-.hero-grid{max-width:860px}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-.note{font-size:14px;color:var(--ink-70);margin-top:18px}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
-.stack{position:relative;height:clamp(380px,56vw,540px)}
-.card{position:absolute;width:56%;aspect-ratio:4/5;border-radius:22px;padding:7%;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 24px 50px -24px rgba(30,27,24,.45);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.card small{font-size:clamp(9px,1.4vw,12px);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.card b{font-family:var(--serif);font-weight:400;font-size:clamp(22px,3.6vw,38px);line-height:1.02}
-.card i{font-style:normal;align-self:flex-start;font-size:clamp(10px,1.4vw,13px);font-weight:700;padding:7px 14px;border-radius:999px}
-.c1{background:var(--terra);color:var(--cream);left:0;top:8%;transform:rotate(-6deg)}
-.c1 i{background:var(--cream);color:var(--ink)}
-.c2{background:var(--sand);right:2%;top:0;transform:rotate(4deg);z-index:2}
-.c2 i{background:var(--terra);color:var(--cream)}
-.c3{background:var(--ink);color:var(--cream);left:22%;bottom:0;transform:rotate(-1.5deg);z-index:3}
-.c3 i{background:var(--cream);color:var(--ink)}
-.stack:hover .c1{transform:rotate(-9deg) translateX(-10px)}
-.stack:hover .c2{transform:rotate(7deg) translateX(10px)}
+/* ===== PORTADA 3D ===== */
+.hero3d{background:radial-gradient(ellipse at 50% 28%,#44312a 0%,#2a1f1b 42%,#1E1B18 72%);color:var(--cream);padding:clamp(8px,3vw,28px) 0 clamp(56px,8vw,96px);border-radius:0 0 clamp(32px,6vw,64px) clamp(32px,6vw,64px);overflow:hidden}
+.stage{position:relative;height:clamp(440px,62vw,660px);perspective:1500px;touch-action:pan-y;animation:stageIn 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes stageIn{from{opacity:.4;transform:scale(.95)}to{opacity:1;transform:none}}
+.rig{position:absolute;left:46%;top:46%;transform-style:preserve-3d;transform:translate(-50%,-50%) rotateX(8deg) rotateY(-10deg);display:flex;flex-direction:column;align-items:center;gap:.04em;will-change:transform}
+.word{position:relative;transform-style:preserve-3d;font-family:var(--serif);line-height:.86;white-space:nowrap;user-select:none}
+.word.big{font-size:clamp(112px,21vw,300px);letter-spacing:-.03em}
+.word.sm{font-size:clamp(26px,5.2vw,76px);letter-spacing:.16em;margin-right:-.16em}
+.word .front{position:relative;display:block;color:#FBF6EF;text-shadow:0 0 1px rgba(255,255,255,.4)}
+.word .layer{position:absolute;left:0;top:0;display:block}
+.floor{position:absolute;left:50%;bottom:6%;width:62%;height:9%;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(212,130,106,.38),transparent 68%);filter:blur(10px)}
+.fcard{position:absolute;width:clamp(78px,11vw,150px);aspect-ratio:4/5;border-radius:14px;background-size:cover;background-position:center;box-shadow:0 22px 40px -14px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.12);will-change:transform}
+.fc1{left:3%;top:9%}.fc2{left:10%;bottom:14%}.fc3{right:30%;top:3%}.fc4{right:24%;bottom:13%}
+.phone3d{position:absolute;right:8%;top:52%;width:clamp(120px,17vw,232px);aspect-ratio:9/19;border-radius:clamp(22px,3vw,34px);background:#0f0d0c;padding:clamp(5px,.8vw,9px);transform-style:preserve-3d;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 70px -20px rgba(0,0,0,.85),0 0 90px -10px rgba(212,130,106,.45);will-change:transform}
+.phone3d::before,.phone3d::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.phone3d::before{background:#2c2724;transform:translateZ(-9px)}
+.phone3d::after{background:#171413;transform:translateZ(-18px)}
+.phone3d .screen{position:relative;height:100%;border-radius:calc(clamp(22px,3vw,34px) - 6px);overflow:hidden;background:#000;transform:translateZ(1px)}
+.phone3d video{width:100%;height:100%;object-fit:cover}
+.hero-copy{text-align:center;max-width:760px;margin:0 auto;padding:0 var(--gutter)}
+.hero-copy .tag{font-family:var(--serif);font-size:clamp(26px,4vw,42px);line-height:1.1}
+.hero-copy .lead{margin:16px auto 0;color:rgba(246,241,234,.74)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;justify-content:center}
+.hero-copy .btn-ghost{border-color:var(--cream)}
+.hero-copy .btn-ghost:hover{background:var(--cream);color:var(--ink)}
+@media(max-width:700px){
+  .fc2,.fc4{display:none}
+  .phone3d{right:3%;top:auto;bottom:0;width:30vw}
+  .fc1{left:2%;top:4%}.fc3{right:auto;left:30%;top:0}
+}
 
-/* marquee */
-.marquee{background:var(--ink);color:var(--cream);overflow:hidden;padding:18px 0;white-space:nowrap}
-.marquee div{display:inline-block;animation:slide 32s linear infinite;font-family:var(--serif);font-size:26px}
-.marquee span{margin:0 26px;color:var(--terra)}
-@keyframes slide{to{transform:translateX(-50%)}}
 
-/* qué hago */
-.split{display:grid;gap:56px;grid-template-columns:1fr 1fr;align-items:start}
+@media(max-width:700px){
+  .rig{left:50%;top:41%}
+  .word.big{font-size:clamp(96px,27vw,130px)}
+  .stage{height:400px}
+  .phone3d{right:6%;bottom:1%;width:24vw}
+  .fc1{left:2%;top:2%}.fc3{left:auto;right:30%;top:0}
+}
+/* ===== QUÉ HAGO ===== */
+.split{display:grid;gap:48px;grid-template-columns:1fr 1fr;align-items:start;margin-top:52px}
 @media(max-width:860px){.split{grid-template-columns:1fr}}
-.list{list-style:none;padding:0;margin-top:28px;display:grid;gap:14px}
+.list{list-style:none;padding:0;margin-top:22px;display:grid;gap:13px}
 .list li{display:flex;gap:14px;align-items:flex-start;font-size:18px}
-.list li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--terra);margin-top:.6em}
-.box{background:var(--sand);border-radius:var(--r);padding:36px}
+.list li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--terra);margin-top:.62em}
+.box{background:var(--sand);border-radius:var(--r);padding:34px}
 .box.dark{background:var(--ink);color:var(--cream)}
 .box.dark .list li::before{background:var(--cream);opacity:.5}
-.box h3{font-size:28px;margin-bottom:6px}
-.ai{margin-top:32px;padding:22px 26px;border:2px dashed rgba(30,27,24,.25);border-radius:20px;font-size:16px}
-.ai b{font-weight:700}
+.ai{margin-top:30px;padding:22px 26px;border:2px dashed rgba(30,27,24,.25);border-radius:20px;font-size:16px;max-width:68ch}
 
+/* ===== MUESTRAS (coverflow 3D) ===== */
+.samples-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.flowwrap{position:relative;margin-top:36px}
+.flow{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;perspective:1200px;padding:34px calc(50% - clamp(115px,36vw,150px)) 50px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.flow::-webkit-scrollbar{display:none}
+.flow .tile{flex:0 0 clamp(230px,72vw,300px);margin:0 -2px;scroll-snap-align:center;transform-style:preserve-3d;will-change:transform}
+.flow .tile:hover{transform:none}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:2px solid var(--ink);background:var(--cream);font-size:22px;cursor:pointer;z-index:3;font-family:inherit}
+.arrow:hover{background:var(--ink);color:var(--cream)}
+.arrow.prev{left:var(--gutter)}.arrow.next{right:var(--gutter)}
+@media(max-width:700px){.arrow{display:none}}
+.hint{font-size:15px;color:var(--ink-70);text-align:center}
 /* muestras */
-.samples-head{margin-bottom:36px}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
-@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.grid{grid-template-columns:1fr 1fr;gap:12px}.grid .tile{padding:9%;border-radius:20px}.grid .tile b{font-size:22px!important}.grid .s-barber b{font-size:38px!important}.grid .tile small{font-size:9px}.grid .s-barber small,.grid .s-barber p{font-size:12px}.grid .tile p{font-size:12px}.grid .tile .pill{font-size:11px;padding:6px 10px}}
+
+
 .tile{aspect-ratio:4/5;border-radius:var(--r);padding:8%;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:transform .35s}
 .tile:hover{transform:translateY(-6px) rotate(-.6deg)}
 .tile small{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.tile b{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,38px);line-height:1.02}
+.tile b{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:1.02}
 .tile p{font-size:16px;opacity:.85}
 .tile .tag{position:absolute;bottom:14px;right:16px;font-size:10px;letter-spacing:.1em;opacity:.55;text-transform:uppercase;font-weight:700}
 .t-a{background:var(--sand)} .t-b{background:var(--terra);color:var(--cream)} .t-c{background:var(--ink);color:var(--cream)}
@@ -106,7 +125,7 @@ nav .btn{padding:10px 20px;font-size:14px}
 .tile .pill{align-self:flex-start;background:var(--ink);color:var(--cream);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:700}
 .t-b .pill,.t-c .pill,.t-e .pill{background:var(--cream);color:var(--ink)}
 .slides{display:flex;gap:6px;margin-top:10px}.slides i{width:26px;height:4px;border-radius:2px;background:currentColor;opacity:.3}.slides i:first-child{opacity:1}
-.hint{margin-top:30px;font-size:15px;color:var(--ink-70)}
+
 .tile.ph{color:var(--cream);background-size:cover;background-position:center}
 .tile.ph::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,27,24,.15) 0%,rgba(30,27,24,.05) 40%,rgba(30,27,24,.78) 100%)}
 .tile.ph>*{position:relative}
@@ -159,118 +178,115 @@ nav .btn{padding:10px 20px;font-size:14px}
 .s-carrusel b{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,5.6vw,62px)}
 .s-carrusel .pill{background:#2A1B4A;color:#CBB8F0}
 .tile .tag{z-index:1}
-/* 4 columnas: textos más chicos */
-@media(min-width:1001px){.grid .tile{padding:7%}.grid .tile b{font-size:clamp(24px,2.5vw,32px)!important}.grid .s-barber b{font-size:clamp(44px,4.6vw,60px)!important}.grid .s-moda b{font-size:clamp(30px,3vw,40px)!important}.grid .s-pilates b{font-size:clamp(20px,2vw,26px)!important}.grid .tile small{font-size:10px}.grid .s-barber small,.grid .s-barber p{font-size:15px}.grid .tile p{font-size:14px}}
 
-/* reels */
-.reels{display:grid;gap:18px;grid-template-columns:repeat(4,1fr);margin-top:18px}
-@media(max-width:1000px){.reels{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:760px){.reels{grid-template-columns:repeat(2,1fr)}}
-.reels .frame{aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:#000}
-.reels video{width:100%;height:100%;object-fit:cover;display:block}
 
-.realwork{display:grid;gap:18px;margin-bottom:18px}
-.rw{position:relative;border-radius:var(--r);overflow:hidden;background:#000}
-.rw video,.rw img{width:100%;height:100%;object-fit:cover;display:block}
-.rw.wide{aspect-ratio:8/3}
-.rw-row{display:grid;gap:18px;grid-template-columns:1fr 1fr 2fr}
-.rw.sq{aspect-ratio:1}
-.rw.pano{aspect-ratio:2/1;display:grid;grid-template-columns:1fr 1fr;gap:0}
-.rw .by{position:absolute;left:12px;bottom:12px;background:rgba(30,27,24,.72);color:var(--cream);font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;text-decoration:none;backdrop-filter:blur(6px)}
-.rw .by:hover{background:var(--terra)}
-@media(max-width:760px){.rw.wide{aspect-ratio:16/9}.rw-row{grid-template-columns:1fr 1fr}.rw.pano{grid-column:span 2}}
-.realwork .reels{grid-template-columns:repeat(3,1fr);margin-top:0}
-@media(max-width:560px){.realwork .reels{grid-template-columns:1fr 1fr}.realwork .reels .rw:first-child{grid-column:span 2;max-width:60%;justify-self:center;width:100%}}
+.flow .tile{aspect-ratio:4/5}
 
-/* auditoría gratis */
-.audit{background:var(--terra);color:var(--cream);border-radius:48px}
-.audit .eyebrow{color:var(--ink)}
-.audit .lead{color:rgba(246,241,234,.92)}
-.audit-grid{display:grid;gap:22px;grid-template-columns:1fr 1fr;margin-top:48px}
-@media(max-width:860px){.audit-grid{grid-template-columns:1fr}}
-.audit .box{background:rgba(246,241,234,.14);color:var(--cream)}
-.audit .box.solid{background:var(--cream);color:var(--ink)}
-.audit .list li::before{background:var(--cream)}
-.audit .box.solid .list li::before{background:var(--terra)}
-.audit .cta-row .btn{background:var(--ink);border-color:var(--ink);color:var(--cream)}
-.audit .cta-row .btn:hover{background:var(--cream);border-color:var(--cream);color:var(--ink)}
-.audit .note{color:rgba(246,241,234,.85)}
+/* ===== TRABAJO ===== */
+.real{background:var(--ink);color:var(--cream);border-radius:clamp(32px,6vw,64px)}
+.real .lead{color:rgba(246,241,234,.72)}
+.real .kicker{color:var(--terra)}
+.real-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center;margin-top:48px}
+@media(max-width:860px){.real-grid{grid-template-columns:1fr}}
+.reels{display:flex;gap:clamp(16px,3vw,32px);justify-content:center;perspective:1100px}
+.mini{width:clamp(130px,22vw,210px);aspect-ratio:9/19;border-radius:28px;background:#0f0d0c;padding:7px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 30px 60px -20px rgba(0,0,0,.9);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.mini:nth-child(1){transform:rotateY(14deg) rotateZ(-2deg)}
+.mini:nth-child(2){transform:rotateY(-14deg) rotateZ(2deg) translateY(28px)}
+.mini:hover{transform:rotateY(0) translateY(-6px)}
+.mini .screen{height:100%;border-radius:22px;overflow:hidden;background:#000}
+.mini video{width:100%;height:100%;object-fit:cover}
+.drive{display:grid;gap:14px;margin-top:30px}
+.drive a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-radius:20px;background:rgba(246,241,234,.07);border:1px solid rgba(246,241,234,.16);text-decoration:none;transition:background .2s,transform .2s}
+.drive a:hover{background:rgba(212,130,106,.22);transform:translateX(4px)}
+.drive b{font-family:var(--serif);font-weight:400;font-size:26px;display:block;line-height:1.1}
+.drive span{font-size:14px;opacity:.7}
+.drive i{font-style:normal;font-weight:700;font-size:15px;white-space:nowrap;color:var(--terra)}
 
-/* trabajo real */
-.real{background:var(--ink);color:var(--cream);border-radius:48px}
-.real .lead{color:rgba(246,241,234,.75)}
-.real .eyebrow{color:var(--terra)}
-.real-wrap{display:grid;gap:56px;grid-template-columns:1fr 1fr;align-items:center}
-@media(max-width:860px){.real-wrap{grid-template-columns:1fr}}
-.real-grid{display:grid;gap:22px;grid-template-columns:repeat(2,1fr)}
-.real .list li{font-size:17px}
-.real .list li::before{background:var(--terra)}
-.work{margin:0}
-.work .frame{aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000}
-.work .frame.img{aspect-ratio:2/3}
-.work video,.work img{width:100%;height:100%;object-fit:cover}
-.work figcaption{margin-top:14px;font-size:15px;line-height:1.4}
-.work figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:22px}
-.work figcaption span{opacity:.6}
-@media(max-width:560px){.real-grid{grid-template-columns:1fr 1fr;gap:14px}.work figcaption b{font-size:18px}.work figcaption{font-size:13px}}
+/* ===== TESTIMONIOS ===== */
+.tests{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,36px);margin-top:48px;align-items:start}
+@media(max-width:760px){.tests{grid-template-columns:1fr}}
+.tv{background:var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(30,27,24,.6)}
+.tv video{display:block;width:100%;height:auto;max-height:78vh;background:#000}
+.tv figcaption{padding:16px 22px;color:var(--cream);font-size:15px;opacity:.85}
 
-/* planes */
-.plans{background:var(--sand);border-radius:48px 48px 0 0}
-.plan-grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:40px;align-items:center}
-@media(max-width:940px){.plan-grid{grid-template-columns:1fr}}
-.plan{background:var(--cream);border-radius:var(--r);padding:38px 34px;position:relative}
-.plan.hot{background:var(--terra);color:var(--cream);padding:48px 34px;box-shadow:0 30px 60px -30px rgba(185,106,82,.9)}
-@media(min-width:941px){.plan.hot{transform:scale(1.05)}}
-.badge{position:absolute;top:-14px;left:34px;background:var(--ink);color:var(--cream);font-size:12px;font-weight:700;letter-spacing:.12em;padding:7px 14px;border-radius:999px}
+/* ===== PLANES ===== */
+.plans{background:var(--sand);border-radius:clamp(32px,6vw,64px)}
+.allin{margin-top:30px;padding:22px 28px;border-radius:22px;background:var(--cream);display:flex;flex-wrap:wrap;gap:8px 26px;font-size:16px}
+.allin b{flex:none;width:100%;font-size:15px}
+.allin span::before{content:"✓ ";color:var(--terra-d);font-weight:700}
+.plan-grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:34px;align-items:stretch}
+@media(max-width:980px){.plan-grid{grid-template-columns:1fr}}
+.plan{background:var(--cream);border-radius:var(--r);padding:36px 32px;position:relative;transition:transform .2s ease-out;transform-style:preserve-3d}
+.plan.hot{background:var(--terra);color:var(--cream);box-shadow:0 30px 60px -30px rgba(185,106,82,.9)}
+.badge{position:absolute;top:-14px;left:32px;background:var(--ink);color:var(--cream);font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px}
 .plan h3{font-size:34px}
 .for{font-size:15px;opacity:.75;margin-top:4px}
-.price{font-family:var(--serif);font-size:72px;line-height:1;margin:22px 0 6px}
+.price{font-family:var(--serif);font-size:68px;line-height:1;margin:20px 0 4px}
 .price small{font-family:var(--sans);font-size:16px;opacity:.7}
-.plan ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:11px;font-size:17px}
-.plan li{display:flex;gap:10px}.plan li::before{content:"✓";font-weight:700;color:var(--terra)}
-.plan.hot li::before{color:var(--cream)}
-.plan li.off{opacity:.4}.plan li.off::before{content:"–";color:inherit}
-.plans-note{margin-top:34px;font-size:15px;color:var(--ink-70);max-width:70ch}
-.mentoria{margin-top:40px;background:var(--ink);color:var(--cream);border-radius:var(--r);padding:clamp(28px,5vw,52px);display:grid;gap:24px;grid-template-columns:1.2fr .8fr;align-items:center}
-@media(max-width:800px){.mentoria{grid-template-columns:1fr}}
-.mentoria h3{font-size:clamp(30px,4vw,44px)}
-.mentoria p{opacity:.8;margin-top:12px}
-.mentoria .btn{border-color:var(--cream);color:var(--cream);justify-self:start}
-.mentoria .btn:hover{background:var(--cream);color:var(--ink)}
+.blk{margin-top:22px;padding-top:18px;border-top:1px solid rgba(30,27,24,.14)}
+.plan.hot .blk{border-color:rgba(246,241,234,.35)}
+.blk>b{display:block;font-size:15px;margin-bottom:8px}
+.blk ul{list-style:none;padding:0;display:grid;gap:8px;font-size:17px}
+.blk li{display:flex;gap:10px}
+.blk li::before{content:"✓";font-weight:700;color:var(--terra-d)}
+.plan.hot .blk li::before{color:var(--cream)}
+.pro{margin-top:22px;background:var(--ink);color:var(--cream);border-radius:var(--r);padding:clamp(30px,5vw,52px);display:grid;gap:30px;grid-template-columns:1.1fr .9fr;align-items:center}
+@media(max-width:860px){.pro{grid-template-columns:1fr}}
+.pro h3{font-size:clamp(38px,5vw,56px)}
+.pro .for{font-size:17px}
+.pro .price{font-size:clamp(46px,6vw,64px)}
+.pro .blk{border-color:rgba(246,241,234,.2);margin:0;padding:0;border:0}
+.pro .blk li::before{color:var(--terra)}
+.mini-cards{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);margin-top:22px}
+@media(max-width:860px){.mini-cards{grid-template-columns:1fr}}
+.mc{background:var(--cream);border-radius:22px;padding:26px 28px}
+.mc h3{font-size:26px}
+.mc .big{font-family:var(--serif);font-size:44px;line-height:1;margin:10px 0}
+.mc p,.mc li{font-size:16px;color:var(--ink-70)}
+.mc ul{list-style:none;padding:0;display:grid;gap:4px;margin-top:8px}
+.note{margin-top:28px;font-size:15px;color:var(--ink-70);max-width:72ch}
 
-/* pasos */
-.steps{display:grid;gap:22px;grid-template-columns:repeat(4,1fr);margin-top:40px}
+/* ===== WEB ===== */
+.webgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
+@media(max-width:860px){.webgrid{grid-template-columns:1fr}}
+.browser{perspective:1000px}
+.bwin{background:#fff;border-radius:18px;box-shadow:0 40px 70px -30px rgba(30,27,24,.5);overflow:hidden;transform:rotateY(-12deg) rotateX(5deg);transition:transform .25s ease-out;border:1px solid rgba(30,27,24,.1)}
+.bbar{display:flex;gap:7px;padding:12px 16px;background:var(--sand)}
+.bbar i{width:11px;height:11px;border-radius:50%;background:rgba(30,27,24,.25)}
+.bbody{padding:26px;display:grid;gap:12px;background:var(--cream)}
+.bbody .h{height:30px;width:70%;background:var(--ink);border-radius:6px}
+.bbody .s{height:12px;width:46%;background:var(--terra);border-radius:6px}
+.bbody .g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.bbody .g div{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center}
+.price-web{font-family:var(--serif);font-size:clamp(44px,6vw,64px);line-height:1;margin-top:22px}
+.price-web small{font-family:var(--sans);font-size:16px;color:var(--ink-70)}
+
+/* ===== PASOS ===== */
+.steps{display:grid;gap:22px;grid-template-columns:repeat(4,1fr);margin-top:50px}
 @media(max-width:940px){.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.steps{grid-template-columns:1fr}}
-.step{border-top:2px solid var(--ink);padding-top:22px}
-.step .n{font-family:var(--serif);font-size:72px;line-height:1;color:var(--terra)}
-.step h3{font-size:26px;margin:10px 0 8px}
+.step{border-top:2px solid var(--ink);padding-top:20px}
+.step .n{font-family:var(--serif);font-size:64px;line-height:1;color:var(--terra)}
+.step h3{font-size:25px;margin:8px 0}
 .step p{font-size:16px;color:var(--ink-70)}
 
-/* faq */
-.faq{max-width:760px;margin-top:48px}
-details{border-bottom:1px solid rgba(30,27,24,.18);padding:22px 0}
+/* ===== FAQ ===== */
+.faq{max-width:780px;margin-top:44px}
+details{border-bottom:1px solid rgba(30,27,24,.18);padding:21px 0}
 summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:28px;line-height:1;color:var(--terra);transition:transform .25s}
 details[open] summary::after{transform:rotate(45deg)}
-details p{margin-top:12px;color:var(--ink-70);font-size:17px;max-width:60ch}
+details p{margin-top:12px;color:var(--ink-70);font-size:17px;max-width:62ch}
 
-/* contacto */
-.contact{background:var(--ink);color:var(--cream);text-align:center;border-radius:48px 48px 0 0}
+/* ===== CONTACTO ===== */
+.contact{background:var(--ink);color:var(--cream);text-align:center;border-radius:clamp(32px,6vw,64px) clamp(32px,6vw,64px) 0 0}
 .contact h2{max-width:none;margin:0 auto}
-.contact .lead{margin:24px auto 0;color:rgba(246,241,234,.75)}
-.contact .cta-row{justify-content:center}
-.contact .btn-ghost{border-color:var(--cream);color:var(--cream)}
-.contact .btn-ghost:hover{background:var(--cream);color:var(--ink)}
+.contact .lead{margin:22px auto 0;color:rgba(246,241,234,.75)}
+.contact .cta-row{margin-top:34px}
 footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;padding:0 0 40px;font-size:14px}
 
-/* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.marquee div{animation:none}.card,.tile,.btn{transition:none}
-}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stage{animation:none}.btn,.mini,.plan,.bwin{transition:none}}
 </style>
 </head>
 <body>
@@ -281,63 +297,66 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
       <a class="logo" href="#top">Meli<span>.</span></a>
       <ul>
         <li><a href="#muestras">Muestras</a></li>
-        <li><a href="#auditoria">Auditoría gratis</a></li>
+        <li><a href="#trabajo">Trabajo real</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
         <li><a href="#planes">Planes</a></li>
-        <li><a href="#como">Cómo funciona</a></li>
+        <li><a href="#web">Creación web</a></li>
         <li><a href="#faq">Preguntas</a></li>
       </ul>
-      <a class="btn btn-solid" href="#contacto" data-contact="wa">Escríbeme</a>
+      <a class="btn btn-solid" href="#contacto" data-contact>Escríbeme</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
 
-<!-- PORTADA -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Contenido para negocios</span>
-      <h1>Tu mes de contenido, <em>listo</em> para publicar.</h1>
-      <p class="lead">Creo y edito posts, carruseles, historias y reels para tus redes, con tus fotos y tu estilo. Tú publicas; yo me ocupo del resto y te guío para programarlo.</p>
-      <div class="cta-row">
-        <a class="btn btn-solid" href="#contacto">Quiero mi mes de contenido</a>
-        <a class="btn btn-ghost" href="#muestras">Ver muestras</a>
-      </div>
-      <p class="note">Entrega en hasta 72 horas desde que recibo tu material. ¿Quieres empezar por algo gratis? <a href="#auditoria">Pide tu mini auditoría de Instagram</a>.</p>
+<!-- PORTADA 3D -->
+<section class="hero3d dark" style="padding-top:clamp(8px,3vw,28px)">
+  <h1 class="sr">Meli · Portfolio de contenido para negocios</h1>
+  <div class="stage" id="stage" aria-hidden="true">
+    <div class="floor"></div>
+    <div class="fcard fc1" data-d="46" data-z="70" data-r="-9" style="background-image:url(mascarilla.jpg)"></div>
+    <div class="fcard fc2" data-d="70" data-z="150" data-r="7" style="background-image:url(barberia.jpg)"></div>
+    <div class="fcard fc3" data-d="30" data-z="40" data-r="5" style="background-image:url(cafe.jpg)"></div>
+    <div class="fcard fc4" data-d="86" data-z="190" data-r="-6" style="background-image:url(pilates.jpg)"></div>
+    <div class="rig" id="rig">
+      <div class="word big" data-layers="30">MELI</div>
+      <div class="word sm" data-layers="14">PORTFOLIO</div>
+    </div>
+    <div class="phone3d" data-d="-30" data-z="170" data-base="translateY(-50%) rotateY(-22deg) rotateX(5deg)">
+      <div class="screen"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+    </div>
+  </div>
+  <div class="hero-copy">
+    <p class="tag">Estrategia y contenido para tu negocio, mes a mes.</p>
+    <p class="lead">Creo y edito posts, carruseles, historias y reels, y te dejo todo el mes planificado y guionado para que lo publiques sin pensar qué toca cada día.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#contacto" data-contact>Quiero mi plan de contenido</a>
+      <a class="btn btn-ghost" href="#muestras">Ver muestras</a>
     </div>
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true">
-  <div>
-    Posts <span>✦</span> Carruseles <span>✦</span> Historias <span>✦</span> Reels <span>✦</span> Textos con llamada a la acción <span>✦</span> Calendario de contenido <span>✦</span>
-    Posts <span>✦</span> Carruseles <span>✦</span> Historias <span>✦</span> Reels <span>✦</span> Textos con llamada a la acción <span>✦</span> Calendario de contenido <span>✦</span>
-  </div>
-</div>
-
 <!-- QUÉ HAGO -->
 <section id="que-hago">
   <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">Qué hago</span>
-      <h2>Publicar cada semana lleva más tiempo del que parece.</h2>
-      <p class="lead">Pensar la idea, diseñar, escribir el texto, editar el vídeo. Yo me encargo de esa parte para que tú sigas con tu negocio.</p>
-    </div>
-    <div class="split" style="margin-top:40px">
-      <div class="box rv">
+    <span class="kicker">Qué hago</span>
+    <h2>Publicar cada día lleva más tiempo del que parece.</h2>
+    <p class="lead">Pensar qué subir, escribir el guion, diseñar, editar. Te dejo todo el mes organizado y produzco una parte de las piezas; el resto lo ejecutas tú con tu kit.</p>
+    <div class="split">
+      <div class="box">
         <h3>Lo que hago</h3>
         <ul class="list">
-          <li>Posts y carruseles con tu identidad visual</li>
-          <li>Historias listas para subir</li>
+          <li>Estrategia completa y calendario mensual</li>
+          <li>Brief de marca y guiones de reels listos para grabar</li>
+          <li>Posts y carruseles diseñados con tu identidad</li>
           <li>Reels editados con tus vídeos</li>
-          <li>Textos con llamada a la acción</li>
-          <li>Calendario mensual de contenido</li>
-          <li>Guion para tus reels y guía paso a paso para programar tus publicaciones</li>
-          <li>Grabación en tu local, solo en Madrid y con coste extra</li>
+          <li>Textos y plantillas de historias</li>
+          <li>Guía paso a paso para programar tus publicaciones</li>
+          <li>Días de grabación en tu local</li>
         </ul>
       </div>
-      <div class="box dark rv">
+      <div class="box dark">
         <h3>Lo que no hago</h3>
         <ul class="list">
           <li>No publico directamente en tus cuentas</li>
@@ -346,145 +365,201 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
         </ul>
       </div>
     </div>
-    <p class="ai rv"><b>Cómo trabajo:</b> creo y edito con ayuda de herramientas de IA y cada pieza pasa por mi revisión. Así llego rápido sin que el contenido pierda tu estilo.</p>
+    <p class="ai"><b>Cómo trabajo:</b> uso herramientas de IA para crear y editar, y reviso cada pieza antes de entregarla. Así llego rápido sin perder tu estilo.</p>
   </div>
 </section>
 
 <!-- MUESTRAS -->
 <section id="muestras" style="padding-top:0">
-  <div class="wrap">
-    <div class="samples-head rv">
-      <div>
-        <span class="eyebrow">Muestras</span>
-        <h2>Así podría verse tu contenido.</h2>
-      </div>
+  <div class="wrap samples-head">
+    <div>
+      <span class="kicker">Muestras</span>
+      <h2>Así podría verse tu contenido.</h2>
     </div>
-    <div class="realwork">
-      <div class="rw wide rv"><video src="zircon.mp4" poster="zircon.jpg" muted loop playsinline preload="none" aria-label="Vídeo de joyería corporal"></video><a class="by" href="https://www.instagram.com/zirconpiercingba/" target="_blank" rel="noopener">@zirconpiercingba</a></div>
-      <div class="rw-row">
-        <div class="rw sq rv"><video src="ninja.mp4" poster="ninja.jpg" muted loop playsinline preload="none" aria-label="Vídeo de producto: máquina Ninja"></video><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
-        <div class="rw sq rv"><video src="shortpen.mp4" poster="shortpen.jpg" muted loop playsinline preload="none" aria-label="Vídeo de producto: Short Pen"></video><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
-        <div class="rw pano rv"><img src="navidad-1.jpg" alt="Carrusel de Navidad, diapositiva 1" loading="lazy"><img src="navidad-2.jpg" alt="Carrusel de Navidad, diapositiva 2" loading="lazy"><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
-      </div>
-      <div class="reels rv" id="trabajo">
-        <div class="frame rw"><video src="rosa-reel.mp4" poster="rosa-reel.jpg" muted loop playsinline preload="none" aria-label="Reel de producto para tatuadores"></video><a class="by" href="https://www.instagram.com/rosamonkeysupplies/" target="_blank" rel="noopener">@rosamonkeysupplies</a></div>
-        <div class="frame rw"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none" aria-label="Reel de laminado de cejas"></video><a class="by" href="https://www.instagram.com/nailsbyflor.st/" target="_blank" rel="noopener">@nailsbyflor.st</a></div>
-        <div class="frame rw"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none" aria-label="Reel de uñas esculpidas"></video><a class="by" href="https://www.instagram.com/nailsbyflor.st/" target="_blank" rel="noopener">@nailsbyflor.st</a></div>
-      </div>
-    </div>
-    <div class="grid">
-      <article class="tile s-estetica rv" style="background-image:url(mascarilla.jpg)">
+    <p class="lead" style="margin:0">Proyectos conceptuales para negocios ficticios, hechos para mostrar mi estilo. No son trabajos para clientes reales.</p>
+  </div>
+  <div class="flowwrap">
+    <button class="arrow prev" aria-label="Muestra anterior">‹</button>
+    <div class="flow" id="flow" tabindex="0" aria-label="Muestras de contenido">
+
+      <article class="tile s-estetica" style="background-image:url(mascarilla.jpg)">
         <small>Centro de estética · Post</small>
         <div><b>Una pausa<br><i>para tu piel</i></b><p>Limpieza facial · 60 min</p></div>
-        <span class="pill">Reserva tu cita</span>
+        <span class="pill">Reserva tu cita</span><span class="tag">Muestra conceptual</span>
       </article>
-      <article class="tile s-barber rv" style="background-image:url(barberia.jpg)">
+      <article class="tile s-barber" style="background-image:url(barberia.jpg)">
         <small>Barbería · Post</small>
         <div><b>FADE<br>+ BARBA</b><p>Martes a sábado · 10 a 20 h</p></div>
-        <span class="pill">Reserva online</span>
+        <span class="pill">Reserva online</span><span class="tag">Muestra conceptual</span>
       </article>
-      <article class="tile s-cafe rv" style="background-image:url(cafe.jpg)">
+      <article class="tile s-cafe" style="background-image:url(cafe.jpg)">
         <small>Cafetería · Historia</small>
         <div><b>Tu café<br><i>de las diez.</i></b><p>Flat white + tostada del día</p></div>
-        <span class="pill">Te esperamos</span>
+        <span class="pill">Te esperamos</span><span class="tag">Muestra conceptual</span>
       </article>
-      <article class="tile s-unas rv">
+      <article class="tile s-moda">
+        <div class="img" style="background-image:url(moda.jpg)"></div>
+        <small>Tienda de ropa · Post</small>
+        <div><b>LO<br>NUEVO</b><p>Tonos tierra · Otoño</p></div>
+        <span class="pill">Ver en tienda →</span><span class="tag">Muestra conceptual</span>
+      </article>
+      <article class="tile s-pilates" style="background-image:url(pilates.jpg)">
+        <small>Estudio de pilates · Post</small>
+        <div><b>Prueba<br>el reformer</b><p>Grupos reducidos · todos los niveles</p></div>
+        <span class="pill">Prueba una clase</span><span class="tag">Muestra conceptual</span>
+      </article>
+      <article class="tile s-unas">
         <div class="circle" style="background-image:url(unas-foto.jpg)"></div>
         <small>Salón de uñas · Post</small>
         <div><b><i>Nude</i> que combina<br>con todo</b><p>Esmaltado semipermanente</p></div>
-        <span class="pill">Pide tu cita</span>
+        <span class="pill">Pide tu cita</span><span class="tag">Muestra conceptual</span>
       </article>
+      <article class="tile s-cosmetica" style="background-image:url(cosmetica.jpg)">
+        <small>Ecommerce de cosmética · Post</small>
+        <div><b>Sérum Calma</b><p>30 ml · piel sensible</p></div>
+        <span class="pill">Comprar ahora</span><span class="tag">Muestra conceptual</span>
+      </article>
+      <article class="tile s-inmo">
+        <div class="img" style="background-image:url(inmo.jpg)"></div>
+        <small>Inmobiliaria · Post</small>
+        <div><b>Piso luminoso<br>en el centro</b><p>3 hab · 2 baños · 95 m²</p></div>
+        <span class="pill">Agenda tu visita</span><span class="tag">Muestra conceptual</span>
+      </article>
+    
+    </div>
+    <button class="arrow next" aria-label="Muestra siguiente">›</button>
+  </div>
+  <p class="hint wrap">Desliza para ver todas. ¿Tu negocio es otro? Mi trabajo se adapta a cada sector.</p>
+</section>
+
+<!-- TRABAJO REAL -->
+<section id="trabajo" class="real dark">
+  <div class="wrap">
+    <span class="kicker">Trabajo real</span>
+    <h2>Contenido que ya he creado.</h2>
+    <div class="real-grid">
+      <div>
+        <p class="lead" style="margin-top:0">Cada carpeta reúne el contenido completo que he hecho para un tipo de negocio. Entra y míralo entero.</p>
+        <div class="drive">
+          <a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener"><div><b>Rosa Monkey</b><span>Contenido para tatuajes</span></div><i>Ver contenido completo</i></a>
+          <a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener"><div><b>Beauty Salon</b><span>Contenido para estética y belleza</span></div><i>Ver contenido completo</i></a>
+          <a href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener"><div><b>Joyería</b><span>Videos y contenido de joyería</span></div><i>Ver contenido completo</i></a>
+        </div>
+      </div>
+      <div class="reels">
+        <div class="mini"><div class="screen"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video></div></div>
+        <div class="mini"><div class="screen"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- AUDITORÍA GRATIS -->
-<section id="auditoria" class="audit">
+<!-- TESTIMONIOS -->
+<section id="testimonios">
   <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">Gratis</span>
-      <h2>Mini auditoría de tu Instagram.</h2>
-      <p class="lead">Miro tu perfil y te digo qué está funcionando y qué está fallando. Sin coste y sin compromiso.</p>
+    <span class="kicker">Testimonios</span>
+    <h2>Lo que cuenta una clienta.</h2>
+    <p class="lead">Dos vídeos con sus propias palabras. Pulsa play para escucharlos completos.</p>
+    <div class="tests">
+      <figure class="tv"><video src="testimonio1.mp4" poster="testimonio1.jpg" controls playsinline preload="none"></video><figcaption>Testimonio de clienta · parte 1</figcaption></figure>
+      <figure class="tv"><video src="testimonio2.mp4" poster="testimonio2.jpg" controls playsinline preload="none"></video><figcaption>Testimonio de clienta · parte 2</figcaption></figure>
     </div>
-    <div class="cta-row rv">
-      <a class="btn" href="#" data-contact="audit">Pedir mi auditoría gratis</a>
-    </div>
-    <p class="note rv">Solo necesito el nombre de tu cuenta. Tu perfil tiene que ser público.</p>
   </div>
 </section>
 
 <!-- PLANES -->
 <section id="planes" class="plans">
   <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">Planes</span>
-      <h2>Tres formas de tener tu contenido al día.</h2>
-      <p class="lead">Precios mensuales. Un plan por marca.</p>
+    <span class="kicker">Planes</span>
+    <h2>Tres formas de tener tu contenido al día.</h2>
+    <p class="lead">Precios mensuales. Un plan por marca. Todo el mes queda planificado; la diferencia está en cuántas piezas produzco yo.</p>
+    <div class="allin">
+      <b>Todos los planes incluyen</b>
+      <span>Estrategia completa</span><span>Brief de marca (primer mes)</span><span>Calendario mensual</span><span>Guiones de reels listos para grabar</span><span>Textos y plantillas</span><span>Guía paso a paso para ejecutarlo</span>
     </div>
     <div class="plan-grid">
-      <article class="plan rv">
-        <h3>Esencial</h3><p class="for">Para empezar con orden</p>
-        <div class="price">49 €<small> /mes</small></div>
-        <ul>
-          <li>4 posts o carruseles</li>
-          <li>4 historias</li>
-          <li>2 reels</li>
-          <li>Textos con llamada a la acción</li>
-          <li class="off">Calendario mensual</li>
-          <li class="off">Optimización de biografía</li>
-        </ul>
+      <article class="plan tilt">
+        <h3>Esencial</h3><p class="for">Presencia constante, todo planificado</p>
+        <div class="price">119 €<small> /mes</small></div>
+        <div class="blk"><b>Planificado para todo el mes</b><ul><li>1 post por día</li><li>4 reels por semana</li><li>2 historias por día</li></ul></div>
+        <div class="blk"><b>Lo produzco yo</b><ul><li>4 reels editados</li><li>4 posts diseñados</li></ul></div>
       </article>
-      <article class="plan hot rv">
-        <span class="badge">RECOMENDADO</span>
-        <h3>Activo</h3><p class="for">Para mantener el ritmo</p>
-        <div class="price">89 €<small> /mes</small></div>
-        <ul>
-          <li>8 posts o carruseles</li>
-          <li>8 historias</li>
-          <li>4 reels</li>
-          <li>Textos con llamada a la acción</li>
-          <li>Calendario mensual</li>
-          <li class="off">Optimización de biografía</li>
-        </ul>
+      <article class="plan hot tilt">
+        <span class="badge">Recomendado</span>
+        <h3>Activo</h3><p class="for">Para crecer con ritmo</p>
+        <div class="price">199 €<small> /mes</small></div>
+        <div class="blk"><b>Planificado para todo el mes</b><ul><li>1 carrusel por día</li><li>6 reels por semana</li><li>4 historias por día</li></ul></div>
+        <div class="blk"><b>Lo produzco yo</b><ul><li>4 reels editados</li><li>8 carruseles diseñados</li></ul></div>
+        <div class="blk"><b>Además</b><ul><li>Optimización de biografía</li></ul></div>
       </article>
-      <article class="plan rv">
-        <h3>Plus</h3><p class="for">Para tener todo cubierto</p>
-        <div class="price">139 €<small> /mes</small></div>
-        <ul>
-          <li>12 posts o carruseles</li>
-          <li>12 historias</li>
-          <li>6 reels</li>
-          <li>Textos con llamada a la acción</li>
-          <li>Calendario mensual</li>
-          <li>Optimización de biografía de Instagram</li>
-        </ul>
+      <article class="plan tilt">
+        <h3>Plus</h3><p class="for">Máxima presencia y acompañamiento</p>
+        <div class="price">299 €<small> /mes</small></div>
+        <div class="blk"><b>Planificado para todo el mes</b><ul><li>2 posts o carruseles por día</li><li>10 reels por semana</li><li>5 historias por día</li></ul></div>
+        <div class="blk"><b>Lo produzco yo</b><ul><li>8 reels editados</li><li>12 posts o carruseles diseñados</li></ul></div>
+        <div class="blk"><b>Además</b><ul><li>Optimización de biografía</li><li>Llamada mensual de estrategia (45 min)</li></ul></div>
       </article>
     </div>
-    <p class="plans-note rv">Tú facilitas fotos, vídeos, información de tu negocio y precios. Incluye una ronda de ajustes por entrega. No incluye publicación directa en tus cuentas, gestión de mensajes ni publicidad. La grabación en tu local es aparte: solo en Madrid y con coste extra.</p>
 
-    <div class="mentoria rv">
+    <div class="pro dark">
       <div>
-        <span class="eyebrow" style="color:var(--terra)">Extra</span>
-        <h3>Mentoría de redes sociales</h3>
-        <p>Entiende cómo funcionan Instagram y TikTok, cómo se crea contenido y qué hace cada formato. Para que decidas con criterio qué publicar.</p>
+        <span class="kicker" style="color:var(--terra)">Marca personal</span>
+        <h3>Creador Pro</h3>
+        <p class="for">Tu marca personal en redes, todos los días.</p>
+        <div class="price">desde 650 €<small> /mes</small></div>
+        <a class="btn btn-solid" href="#contacto" data-contact style="margin-top:22px">Hablemos de tu marca</a>
       </div>
-      <a class="btn" href="#contacto" data-contact="wa">Consulta el precio</a>
+      <div class="blk">
+        <ul>
+          <li>Produzco todo tu contenido: posts, carruseles, historias y reels editados</li>
+          <li>Estrategia completa, guiones y brief de marca</li>
+          <li>Optimización de biografía</li>
+          <li>Llamada de estrategia semanal o quincenal (45 min)</li>
+          <li>Se define contigo en una llamada de diagnóstico</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-cards">
+      <div class="mc"><h3>Día de grabación</h3><div class="big">47 €</div><p>Hasta 3 horas en una ubicación, movilidad incluida. Cada hora extra, 15 €.</p></div>
+      <div class="mc"><h3>Piezas extra</h3><ul><li>Reel editado · 30 €</li><li>Carrusel · 20 €</li><li>Post · 12 €</li></ul></div>
+      <div class="mc"><h3>Mentoría de redes</h3><p>Entiende cómo funcionan Instagram y TikTok, cómo se crea contenido y qué hace cada formato.</p><a class="btn btn-ghost" href="#contacto" data-contact style="margin-top:16px;padding:12px 22px;font-size:15px">Consulta el precio</a></div>
+    </div>
+    <p class="note">Tú facilitas fotos, vídeos, información de tu negocio y precios. Una ronda de ajustes por entrega. No incluye publicación directa en tus cuentas, gestión de mensajes ni publicidad.</p>
+  </div>
+</section>
+
+<!-- CREACIÓN WEB -->
+<section id="web">
+  <div class="wrap webgrid">
+    <div>
+      <span class="kicker">Creación web</span>
+      <h2>Webs para spas y tiendas.</h2>
+      <p class="lead">Sitios pensados para el móvil, con el mismo cuidado de diseño que ves aquí. Esta web también la hice yo.</p>
+      <div class="price-web">desde 500 €</div>
+      <a class="btn btn-solid" href="#contacto" data-contact style="margin-top:24px">Pedir presupuesto</a>
+    </div>
+    <div class="browser">
+      <div class="bwin tilt">
+        <div class="bbar"><i></i><i></i><i></i></div>
+        <div class="bbody"><div class="h"></div><div class="s"></div>
+          <div class="g"><div style="background-image:url(mascarilla.jpg)"></div><div style="background-image:url(cosmetica.jpg)"></div><div style="background-image:url(moda.jpg)"></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CÓMO FUNCIONA -->
-<section id="como">
+<section id="como" style="padding-top:0">
   <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">Cómo funciona</span>
-      <h2>De tu material a tu mes de contenido, en 4 pasos.</h2>
-    </div>
+    <span class="kicker">Cómo funciona</span>
+    <h2>De tu material a tu mes de contenido, en 4 pasos.</h2>
     <div class="steps">
-      <div class="step rv"><div class="n">1</div><h3>Hablamos</h3><p>Una llamada breve para conocer tu negocio y elegir el plan.</p></div>
-      <div class="step rv"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información de tu negocio y precios. Para los reels te paso el guion y tú grabas (o grabo yo, si estás en Madrid).</p></div>
-      <div class="step rv"><div class="n">3</div><h3>Preparo tu mes</h3><p>Entrega en hasta 72 horas desde que tengo todo.</p></div>
-      <div class="step rv"><div class="n">4</div><h3>Recibes y ajustamos</h3><p>Archivos listos para publicar, con una ronda de ajustes.</p></div>
+      <div class="step"><div class="n">1</div><h3>Hablamos</h3><p>Una llamada breve para conocer tu negocio y elegir el plan.</p></div>
+      <div class="step"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información y precios. Para los reels te paso el guion y tú grabas.</p></div>
+      <div class="step"><div class="n">3</div><h3>Preparo tu mes</h3><p>Estrategia, calendario, guiones y las piezas que produzco yo.</p></div>
+      <div class="step"><div class="n">4</div><h3>Recibes y ajustamos</h3><p>Archivos listos para publicar, con una ronda de ajustes por entrega.</p></div>
     </div>
   </div>
 </section>
@@ -492,55 +567,115 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
 <!-- FAQ -->
 <section id="faq" style="padding-top:0">
   <div class="wrap">
-    <div class="rv"><span class="eyebrow">Preguntas</span><h2>Lo que suelen preguntarme.</h2></div>
-    <div class="faq rv">
-      <details><summary>¿Publicas por mí?</summary><p>No publico directamente en tus cuentas. Te entrego los archivos y los textos listos, y te guío paso a paso para que dejes todo programado.</p></details>
-      <details><summary>¿Qué necesito enviarte?</summary><p>Fotos, vídeos, información de tu negocio y los precios de tus servicios.</p></details>
-      <details><summary>¿Cómo funcionan los reels?</summary><p>Te paso un guion para cada reel, tú grabas y me envías los vídeos para que los edite.</p></details>
-      <details><summary>¿Desde cuándo cuentan las 72 horas?</summary><p>Desde que recibo todo el material necesario, siempre que el volumen acordado permita cumplirlo.</p></details>
-      <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por cada entrega.</p></details>
-      <details><summary>¿Puedo usar un plan para dos marcas?</summary><p>No. Cada plan es para una marca.</p></details>
+    <span class="kicker">Preguntas</span>
+    <h2>Lo que suelen preguntarme.</h2>
+    <div class="faq">
+      <details><summary>¿Qué significa "planificado" y "lo produzco yo"?</summary><p>Planificado: cada pieza del mes tiene su idea, su guion o texto y su fecha en el calendario. Lo produzco yo: las piezas que diseño o edito personalmente. El resto lo ejecutas tú con el kit, o me lo pides aparte.</p></details>
+      <details><summary>¿Y si quiero que lo hagas todo?</summary><p>Con Creador Pro produzco todo tu contenido. También puedes añadir piezas sueltas a cualquier plan.</p></details>
+      <details><summary>¿Publicas por mí?</summary><p>No publico directamente en tus cuentas. Te guío paso a paso para que dejes todo programado.</p></details>
+      <details><summary>¿Grabas en mi local?</summary><p>Sí, con un día de grabación: 47 €, hasta 3 horas en una ubicación y con la movilidad incluida. Cada hora extra son 15 €.</p></details>
+      <details><summary>¿Qué necesito enviarte?</summary><p>Fotos, vídeos, información de tu negocio y los precios de tus servicios. Para los reels, yo te paso el guion, tú grabas y me envías los vídeos para editar.</p></details>
       <details><summary>¿Trabajas con IA?</summary><p>Sí. Uso herramientas de IA para crear y editar, y reviso cada pieza antes de entregarla.</p></details>
-      <details><summary>¿Grabas en mi local?</summary><p>Sí, solo en Madrid y con coste extra. Si estás en otra ciudad, te paso el guion y tú grabas.</p></details>
-      <details><summary>¿Gestionas anuncios y mensajes?</summary><p>No. Me centro en crear y editar tu contenido.</p></details>
+      <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por cada entrega.</p></details>
+      <details><summary>¿Gestionas anuncios o mensajes?</summary><p>No. Me centro en la estrategia y en crear y editar tu contenido.</p></details>
+      <details><summary>¿Puedo usar un plan para dos marcas?</summary><p>No. Cada plan es para una marca.</p></details>
     </div>
   </div>
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" class="contact">
+<section id="contacto" class="contact dark">
   <div class="wrap">
-    <span class="eyebrow" style="color:var(--terra)">Contacto</span>
+    <span class="kicker" style="color:var(--terra)">Contacto</span>
     <h2>Hablemos de tu contenido.</h2>
     <p class="lead">Cuéntame qué tipo de negocio tienes y coordinamos una llamada breve. Sin compromiso.</p>
-    <div class="cta-row">
-      <a class="btn btn-solid" href="#" data-contact="wa">Escribir por WhatsApp</a>
-      <a class="btn btn-ghost" href="#" data-contact="audit">Pedir mi auditoría gratis</a>
-    </div>
+    <div class="cta-row"><a class="btn btn-solid" href="#" data-contact>Escribir por WhatsApp</a></div>
   </div>
 </section>
 </main>
 
-<footer>
-  <p>Meli · Creación y edición de contenido para negocios</p>
-</footer>
+<footer><p>Meli · Estrategia y contenido para negocios · España y Argentina</p></footer>
 
 <script>
 const WHATSAPP = "34644888144";
 const waLink = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Meli, vi tu portafolio y quiero hablar de mi contenido");
-const auditLink = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Meli, quiero mi mini auditoría gratuita de Instagram. Mi cuenta es @");
-document.querySelectorAll("[data-contact]").forEach(a=>{
-  a.href = a.dataset.contact === "audit" ? auditLink : waLink; a.target = "_blank"; a.rel = "noopener";
+document.querySelectorAll("[data-contact]").forEach(a=>{a.href=waLink;a.target="_blank";a.rel="noopener"});
+
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---- letras 3D: capas apiladas en profundidad ---- */
+document.querySelectorAll(".word").forEach(w=>{
+  const txt = w.textContent.trim(), n = +w.dataset.layers || 20;
+  w.textContent = "";
+  const front = document.createElement("span"); front.className = "front"; front.textContent = txt; w.appendChild(front);
+  const from = [233,150,122], to = [92,43,32];
+  for(let i=1;i<=n;i++){
+    const k = i/n, c = from.map((v,j)=>Math.round(v+(to[j]-v)*k));
+    const s = document.createElement("span"); s.className = "layer"; s.textContent = txt;
+    s.style.color = "rgb("+c.join(",")+")";
+    s.style.transform = "translateZ(-"+(i*0.018).toFixed(3)+"em)";
+    w.insertBefore(s, front);
+  }
 });
 
-const io = new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
-}),{threshold:.12});
-const vio = new IntersectionObserver(es=>es.forEach(e=>{
-  e.isIntersecting ? e.target.play().catch(()=>{}) : e.target.pause();
-}),{threshold:.4});
-document.querySelectorAll("#muestras video").forEach(v=>vio.observe(v));
-document.querySelectorAll(".rv").forEach((el,i)=>{ el.style.transitionDelay = (i%3)*80+"ms"; io.observe(el); });
+/* ---- portada: inclina todo con el puntero o el dedo ---- */
+const hero = document.querySelector(".hero3d"), rig = document.getElementById("rig");
+const items = [...document.querySelectorAll("#stage [data-d]")];
+let tx=0, ty=0, cx=0, cy=0, hover=false, visible=true;
+hero.addEventListener("pointermove",e=>{const r=hero.getBoundingClientRect();tx=((e.clientX-r.left)/r.width-.5)*2;ty=((e.clientY-r.top)/r.height-.5)*2;hover=true});
+hero.addEventListener("pointerleave",()=>{hover=false});
+new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(hero);
+function paint(){
+  rig.style.transform = "translate(-50%,-50%) rotateX("+(8-cy*9)+"deg) rotateY("+(-10+cx*18)+"deg)";
+  items.forEach(el=>{
+    const d=+el.dataset.d, z=+el.dataset.z||0, r=+el.dataset.r||0, base=el.dataset.base||"";
+    el.style.transform = "translate3d("+(-cx*d)+"px,"+(-cy*d*.7)+"px,"+z+"px) "+base+" rotate("+(r+cx*3)+"deg)";
+  });
+}
+function frame(t){
+  if(visible){
+    if(!hover){tx=Math.sin(t/2600)*.55;ty=Math.cos(t/3400)*.25}
+    cx+=(tx-cx)*.08; cy+=(ty-cy)*.08; paint();
+  }
+  requestAnimationFrame(frame);
+}
+if(reduce){paint()}else{requestAnimationFrame(frame)}
+
+/* ---- muestras: coverflow 3D ---- */
+const flow = document.getElementById("flow"), cards = [...flow.querySelectorAll(".tile")];
+function coverflow(){
+  const fr = flow.getBoundingClientRect(), mid = fr.left + fr.width/2;
+  cards.forEach(c=>{
+    const r = c.getBoundingClientRect(), d = (r.left + r.width/2 - mid)/r.width, a = Math.abs(d);
+    c.style.transform = "rotateY("+(-d*34)+"deg) translateZ("+(-a*110)+"px) scale("+(1-Math.min(a,2.5)*.07)+")";
+    c.style.opacity = Math.max(.35, 1-a*.28);
+    c.style.zIndex = 10-Math.round(a*3);
+  });
+}
+flow.addEventListener("scroll",()=>requestAnimationFrame(coverflow),{passive:true});
+addEventListener("resize",coverflow); coverflow();
+document.querySelector(".arrow.prev").onclick=()=>flow.scrollBy({left:-(cards[0].offsetWidth),behavior:"smooth"});
+document.querySelector(".arrow.next").onclick=()=>flow.scrollBy({left:(cards[0].offsetWidth),behavior:"smooth"});
+window.addEventListener("load",()=>{ // empieza con la 3.ª al centro
+  flow.scrollLeft = cards[0].offsetWidth*1.5 - 0; coverflow();
+});
+
+/* ---- tarjetas que se inclinan con la mano ---- */
+if(!reduce) document.querySelectorAll(".tilt").forEach(el=>{
+  const base = el.classList.contains("bwin") ? "rotateY(-12deg) rotateX(5deg)" : "";
+  el.addEventListener("pointermove",e=>{
+    if(e.pointerType==="touch") return;
+    const r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    el.style.transform="perspective(900px) rotateX("+(-y*8)+"deg) rotateY("+(x*10)+"deg) translateY(-4px)";
+  });
+  el.addEventListener("pointerleave",()=>{el.style.transform=base});
+});
+
+/* ---- vídeos: reels se reproducen al verse; testimonios con sonido, uno a la vez ---- */
+const vio = new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.4});
+document.querySelectorAll(".mini video").forEach(v=>vio.observe(v));
+const tvs = [...document.querySelectorAll(".tv video")];
+tvs.forEach(v=>v.addEventListener("play",()=>tvs.forEach(o=>{if(o!==v)o.pause()})));
 </script>
 </body>
 </html>
