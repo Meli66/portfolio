@@ -3,114 +3,109 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meli · Contenido para redes de negocios</title>
-<meta name="description" content="Estrategia y contenido para redes de negocios: posts, carruseles, historias y reels, planificados mes a mes.">
-<meta name="theme-color" content="#1E1B18">
+<title>Meli · Contenido para negocios</title>
+<meta name="description" content="Estrategia, guiones y edición de contenido para redes de negocios. Todo el mes planificado.">
+<meta name="theme-color" content="#F3F2EE">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Bebas+Neue&family=Fraunces:ital,wght@0,600;1,600&family=Archivo+Black&family=Syne:wght@800&family=Playfair+Display:ital,wght@0,600;1,600&family=Space+Grotesk:wght@700&family=Manrope:wght@800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#F6F1EA; --ink:#1E1B18; --terra:#D4826A; --terra-d:#B96A52; --sand:#E9DFD3; --ink-70:rgba(30,27,24,.7);
-  --serif:"DM Serif Display",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
-  --r:28px; --gutter:clamp(20px,5vw,56px); --max:1120px;
+  --paper:#F3F2EE; --espresso:#1B1411; --cherry:#D9262E; --cherry-d:#B81D24; --blush:#F6D3CF; --stone:#D9D5CD;
+  --muted:rgba(27,20,17,.62);
+  --f:"Bricolage Grotesque",system-ui,sans-serif;
+  --gutter:clamp(18px,4vw,48px);
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--paper);color:var(--espresso);font-family:var(--f);font-size:18px;line-height:1.5;font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
 a{color:inherit}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-section{padding:clamp(72px,11vw,136px) 0}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.01em}
-h2{font-size:clamp(34px,5.6vw,64px);max-width:16ch}
-h3{font-size:28px}
+:focus-visible{outline:3px solid var(--cherry);outline-offset:3px;border-radius:6px}
+.wrap{padding:0 var(--gutter)}
+.disp{font-weight:750;font-variation-settings:"wdth" 78,"opsz" 96;letter-spacing:-.045em;line-height:.88}
+.muted{color:var(--muted)}
+section{position:relative}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.lead{font-size:clamp(18px,2.1vw,21px);color:var(--ink-70);max-width:48ch;margin-top:22px}
-em{font-style:italic}
-:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
-.kicker{display:block;font-size:15px;color:var(--terra-d);font-weight:700;margin-bottom:16px}
 
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s;cursor:pointer;background:transparent;color:inherit;font-family:inherit}
-.btn:hover{transform:translateY(-2px)}
-.btn-solid{background:var(--terra);border-color:var(--terra);color:var(--cream)}
-.btn-solid:hover{background:var(--terra-d);border-color:var(--terra-d)}
-.btn-ghost:hover{background:var(--ink);color:var(--cream)}
-.dark .btn-ghost{border-color:var(--cream)}
-.dark .btn-ghost:hover{background:var(--cream);color:var(--ink)}
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 26px;border-radius:999px;font:600 16px/1 var(--f);text-decoration:none;border:0;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s,color .2s}
+.btn:hover{transform:scale(1.04)}
+.btn.red{background:var(--cherry);color:#fff}
+.btn.red:hover{background:var(--cherry-d)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn.line:hover{background:var(--espresso);color:var(--paper);box-shadow:none}
 
-header{position:sticky;top:0;z-index:30;background:rgba(30,27,24,.82);backdrop-filter:blur(14px);color:var(--cream)}
-nav{display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{font-family:var(--serif);font-size:26px;text-decoration:none}
-.logo span{color:var(--terra)}
-nav ul{display:flex;gap:26px;list-style:none;padding:0}
-nav ul a{text-decoration:none;font-size:15px;font-weight:500;opacity:.85}
-nav ul a:hover{opacity:1;color:var(--terra)}
-nav .btn{padding:10px 20px;font-size:14px;color:var(--cream)}
-@media(max-width:920px){nav ul{display:none}}
+/* cabecera mínima */
+.top{position:absolute;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px var(--gutter);font-size:15px}
+.top .logo{font-weight:800;font-size:22px;letter-spacing:-.04em;text-decoration:none}
+.top .logo i{font-style:normal;color:var(--cherry)}
 
-/* ===== PORTADA 3D ===== */
-.hero3d{background:radial-gradient(ellipse at 50% 28%,#44312a 0%,#2a1f1b 42%,#1E1B18 72%);color:var(--cream);padding:clamp(8px,3vw,28px) 0 clamp(56px,8vw,96px);border-radius:0 0 clamp(32px,6vw,64px) clamp(32px,6vw,64px);overflow:hidden}
-.stage{position:relative;height:clamp(440px,62vw,660px);perspective:1500px;touch-action:pan-y;animation:stageIn 1.1s cubic-bezier(.2,.8,.2,1) both}
-@keyframes stageIn{from{opacity:.4;transform:scale(.95)}to{opacity:1;transform:none}}
-.rig{position:absolute;left:46%;top:46%;transform-style:preserve-3d;transform:translate(-50%,-50%) rotateX(8deg) rotateY(-10deg);display:flex;flex-direction:column;align-items:center;gap:.04em;will-change:transform}
-.word{position:relative;transform-style:preserve-3d;font-family:var(--serif);line-height:.86;white-space:nowrap;user-select:none}
-.word.big{font-size:clamp(112px,21vw,300px);letter-spacing:-.03em}
-.word.sm{font-size:clamp(26px,5.2vw,76px);letter-spacing:.16em;margin-right:-.16em}
-.word .front{position:relative;display:block;color:#FBF6EF;text-shadow:0 0 1px rgba(255,255,255,.4)}
-.word .layer{position:absolute;left:0;top:0;display:block}
-.floor{position:absolute;left:50%;bottom:6%;width:62%;height:9%;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(212,130,106,.38),transparent 68%);filter:blur(10px)}
-.fcard{position:absolute;width:clamp(78px,11vw,150px);aspect-ratio:4/5;border-radius:14px;background-size:cover;background-position:center;box-shadow:0 22px 40px -14px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.12);will-change:transform}
-.fc1{left:3%;top:9%}.fc2{left:10%;bottom:14%}.fc3{right:30%;top:3%}.fc4{right:24%;bottom:13%}
-.phone3d{position:absolute;right:8%;top:52%;width:clamp(120px,17vw,232px);aspect-ratio:9/19;border-radius:clamp(22px,3vw,34px);background:#0f0d0c;padding:clamp(5px,.8vw,9px);transform-style:preserve-3d;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 70px -20px rgba(0,0,0,.85),0 0 90px -10px rgba(212,130,106,.45);will-change:transform}
-.phone3d::before,.phone3d::after{content:"";position:absolute;inset:0;border-radius:inherit}
-.phone3d::before{background:#2c2724;transform:translateZ(-9px)}
-.phone3d::after{background:#171413;transform:translateZ(-18px)}
-.phone3d .screen{position:relative;height:100%;border-radius:calc(clamp(22px,3vw,34px) - 6px);overflow:hidden;background:#000;transform:translateZ(1px)}
-.phone3d video{width:100%;height:100%;object-fit:cover}
-.hero-copy{text-align:center;max-width:760px;margin:0 auto;padding:0 var(--gutter)}
-.hero-copy .tag{font-family:var(--serif);font-size:clamp(26px,4vw,42px);line-height:1.1}
-.hero-copy .lead{margin:16px auto 0;color:rgba(246,241,234,.74)}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;justify-content:center}
-.hero-copy .btn-ghost{border-color:var(--cream)}
-.hero-copy .btn-ghost:hover{background:var(--cream);color:var(--ink)}
-@media(max-width:700px){
-  .fc2,.fc4{display:none}
-  .phone3d{right:3%;top:auto;bottom:0;width:30vw}
-  .fc1{left:2%;top:4%}.fc3{right:auto;left:30%;top:0}
+
+@media(max-width:640px){.top .muted{display:none}}
+.track .tile.s-pilates b{font-size:32px!important}
+/* dock flotante */
+.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;padding:6px;border-radius:999px;background:rgba(27,20,17,.86);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 18px 40px -16px rgba(27,20,17,.6);color:var(--paper)}
+.dock a{font-size:15px;font-weight:500;text-decoration:none;padding:12px 16px;border-radius:999px;transition:background .2s}
+.dock a:hover{background:rgba(243,242,238,.12)}
+.dock a.cta{background:var(--cherry);color:#fff;font-weight:600}
+.dock a.cta:hover{background:var(--cherry-d)}
+@media(max-width:560px){.dock .opt{display:none}.dock a{padding:12px 14px}}
+
+/* ===== PORTADA ===== */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,3vw,48px);padding:96px var(--gutter) 40px;align-items:center;overflow:hidden}
+.hero h1{font-size:clamp(58px,8.6vw,148px)}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:block}
+.hero .lead{font-size:clamp(18px,1.6vw,21px);max-width:44ch;margin-top:28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.cols{height:calc(100svh - 136px);min-height:520px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;overflow:hidden;border-radius:26px;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent)}
+.belt{display:flex;flex-direction:column;gap:14px;animation:up 46s linear infinite}
+.c2 .belt{animation-direction:reverse;animation-duration:54s}
+.c3 .belt{animation-duration:62s}
+.cols:hover .belt{animation-play-state:paused}
+@keyframes up{to{transform:translateY(calc(-50% - 7px))}}
+.m{border-radius:18px;overflow:hidden;background:var(--stone);flex:none}
+.m.v{aspect-ratio:9/16}.m.p{aspect-ratio:4/5}
+.m img,.m video{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:84px;min-height:auto}
+  .cols{height:440px;min-height:0;grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:560px){.cols{grid-template-columns:repeat(2,1fr)}.c3{display:none}}
+
+/* ===== MANIFIESTO ===== */
+.manifest{padding:clamp(100px,16vw,200px) var(--gutter) clamp(80px,12vw,160px)}
+.manifest p.big{font-weight:600;font-variation-settings:"wdth" 90,"opsz" 96;font-size:clamp(32px,4.6vw,76px);line-height:1.04;letter-spacing:-.035em;max-width:20ch}
+.manifest .w{display:inline-block}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);margin-top:clamp(56px,8vw,110px);max-width:1100px}
+@media(max-width:760px){.dos{grid-template-columns:1fr}}
+.dos h3{font-size:15px;font-weight:600;margin-bottom:14px;color:var(--muted)}
+.dos ul{list-style:none;padding:0;border-top:1.5px solid var(--espresso)}
+.dos li{padding:14px 0;border-bottom:1px solid var(--stone);font-size:19px}
+.dos .no li{color:var(--muted)}
+.ai{margin-top:40px;max-width:60ch;font-size:17px}
+
+/* ===== MUESTRAS (horizontal) ===== */
+.hsec{background:var(--espresso);color:var(--paper);border-radius:clamp(26px,4vw,48px)}
+.hpin{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(70px,9vw,110px) 0 clamp(70px,9vw,110px);overflow:hidden}
+.hhead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding:0 var(--gutter)}
+.hhead h2{font-size:clamp(46px,7vw,120px)}
+.hhead p{max-width:36ch;color:rgba(243,242,238,.68);font-size:17px}
+.track{display:flex;align-items:flex-start;gap:18px;padding:40px var(--gutter) 0;width:max-content;will-change:transform}
+.track .tile{width:clamp(290px,27vw,380px);height:auto;aspect-ratio:4/5;flex:none;padding:clamp(22px,2.2vw,30px)}
+.track .tile .tag{bottom:14px;right:16px}
+.track .endcard{width:clamp(290px,27vw,380px);aspect-ratio:4/5;flex:none;border-radius:28px;border:1.5px dashed rgba(243,242,238,.35);display:flex;flex-direction:column;justify-content:flex-end;padding:30px;font-size:24px;line-height:1.15;font-weight:600}
+.track .endcard .btn{margin-top:20px;align-self:flex-start}
+@media(max-width:900px){
+  .hpin{min-height:auto}
+  .trackwrap{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .trackwrap::-webkit-scrollbar{display:none}
+  .track .tile,.track .endcard{width:74vw;scroll-snap-align:center}
 }
 
-
-@media(max-width:700px){
-  .rig{left:50%;top:41%}
-  .word.big{font-size:clamp(96px,27vw,130px)}
-  .stage{height:400px}
-  .phone3d{right:6%;bottom:1%;width:24vw}
-  .fc1{left:2%;top:2%}.fc3{left:auto;right:30%;top:0}
-}
-/* ===== QUÉ HAGO ===== */
-.split{display:grid;gap:48px;grid-template-columns:1fr 1fr;align-items:start;margin-top:52px}
-@media(max-width:860px){.split{grid-template-columns:1fr}}
-.list{list-style:none;padding:0;margin-top:22px;display:grid;gap:13px}
-.list li{display:flex;gap:14px;align-items:flex-start;font-size:18px}
-.list li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--terra);margin-top:.62em}
-.box{background:var(--sand);border-radius:var(--r);padding:34px}
-.box.dark{background:var(--ink);color:var(--cream)}
-.box.dark .list li::before{background:var(--cream);opacity:.5}
-.ai{margin-top:30px;padding:22px 26px;border:2px dashed rgba(30,27,24,.25);border-radius:20px;font-size:16px;max-width:68ch}
-
-/* ===== MUESTRAS (coverflow 3D) ===== */
-.samples-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-.flowwrap{position:relative;margin-top:36px}
-.flow{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;perspective:1200px;padding:34px calc(50% - clamp(115px,36vw,150px)) 50px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.flow::-webkit-scrollbar{display:none}
-.flow .tile{flex:0 0 clamp(230px,72vw,300px);margin:0 -2px;scroll-snap-align:center;transform-style:preserve-3d;will-change:transform}
-.flow .tile:hover{transform:none}
-.arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:2px solid var(--ink);background:var(--cream);font-size:22px;cursor:pointer;z-index:3;font-family:inherit}
-.arrow:hover{background:var(--ink);color:var(--cream)}
-.arrow.prev{left:var(--gutter)}.arrow.next{right:var(--gutter)}
-@media(max-width:700px){.arrow{display:none}}
-.hint{font-size:15px;color:var(--ink-70);text-align:center}
 /* muestras */
 
 
@@ -180,207 +175,189 @@ nav .btn{padding:10px 20px;font-size:14px;color:var(--cream)}
 .tile .tag{z-index:1}
 
 
-.flow .tile{aspect-ratio:4/5}
 
-/* ===== TRABAJO ===== */
-.real{background:var(--ink);color:var(--cream);border-radius:clamp(32px,6vw,64px)}
-.real .lead{color:rgba(246,241,234,.72)}
-.real .kicker{color:var(--terra)}
-.real-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center;margin-top:48px}
-@media(max-width:860px){.real-grid{grid-template-columns:1fr}}
-.reels{display:flex;gap:clamp(16px,3vw,32px);justify-content:center;perspective:1100px}
-.mini{width:clamp(130px,22vw,210px);aspect-ratio:9/19;border-radius:28px;background:#0f0d0c;padding:7px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 30px 60px -20px rgba(0,0,0,.9);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
-.mini:nth-child(1){transform:rotateY(14deg) rotateZ(-2deg)}
-.mini:nth-child(2){transform:rotateY(-14deg) rotateZ(2deg) translateY(28px)}
-.mini:hover{transform:rotateY(0) translateY(-6px)}
-.mini .screen{height:100%;border-radius:22px;overflow:hidden;background:#000}
-.mini video{width:100%;height:100%;object-fit:cover}
-.drive{display:grid;gap:14px;margin-top:30px}
-.drive a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-radius:20px;background:rgba(246,241,234,.07);border:1px solid rgba(246,241,234,.16);text-decoration:none;transition:background .2s,transform .2s}
-.drive a:hover{background:rgba(212,130,106,.22);transform:translateX(4px)}
-.drive b{font-family:var(--serif);font-weight:400;font-size:26px;display:block;line-height:1.1}
-.drive span{font-size:14px;opacity:.7}
-.drive i{font-style:normal;font-weight:700;font-size:15px;white-space:nowrap;color:var(--terra)}
+
+/* ===== TRABAJO REAL ===== */
+.real{padding:clamp(90px,12vw,170px) var(--gutter)}
+.real-top{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+@media(max-width:900px){.real-top{grid-template-columns:1fr}}
+.real h2{font-size:clamp(46px,7vw,120px);max-width:11ch}
+.reels{display:flex;gap:14px}
+.reels .m{width:clamp(150px,15vw,230px)}
+.rows{margin-top:clamp(50px,7vw,90px);border-top:1.5px solid var(--espresso)}
+.row{position:relative;display:grid;grid-template-columns:1.2fr 1fr auto;gap:20px;align-items:center;padding:clamp(22px,3vw,34px) 6px;border-bottom:1px solid var(--stone);text-decoration:none;overflow:hidden;isolation:isolate}
+.row::before{content:"";position:absolute;inset:0;background:var(--cherry);transform:scaleY(0);transform-origin:bottom;transition:transform .45s cubic-bezier(.7,0,.2,1);z-index:-1}
+.row:hover::before{transform:scaleY(1)}
+.row:hover{color:#fff}
+.row b{font-weight:750;font-variation-settings:"wdth" 80;font-size:clamp(30px,4vw,62px);letter-spacing:-.04em;line-height:1}
+.row span{font-size:17px}
+.row em{font-style:normal;font-weight:600;font-size:15px;white-space:nowrap}
+@media(max-width:640px){.row{grid-template-columns:1fr auto}.row span{display:none}}
 
 /* ===== TESTIMONIOS ===== */
-.tests{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,36px);margin-top:48px;align-items:start}
-@media(max-width:760px){.tests{grid-template-columns:1fr}}
-.tv{background:var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(30,27,24,.6)}
-.tv video{display:block;width:100%;height:auto;max-height:78vh;background:#000}
-.tv figcaption{padding:16px 22px;color:var(--cream);font-size:15px;opacity:.85}
+.tests{padding:0 var(--gutter) clamp(90px,12vw,170px)}
+.tests h2{font-size:clamp(40px,5.6vw,92px);max-width:13ch}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px;align-items:start}
+@media(max-width:760px){.tgrid{grid-template-columns:1fr}}
+.tv{margin:0;background:var(--espresso);border-radius:24px;overflow:hidden}
+.tv video{width:100%;height:auto;max-height:80vh;background:#000}
+.tv figcaption{padding:14px 20px;color:rgba(243,242,238,.75);font-size:15px}
 
 /* ===== PLANES ===== */
-.plans{background:var(--sand);border-radius:clamp(32px,6vw,64px)}
-.allin{margin-top:30px;padding:22px 28px;border-radius:22px;background:var(--cream);display:flex;flex-wrap:wrap;gap:8px 26px;font-size:16px}
-.allin b{flex:none;width:100%;font-size:15px}
-.allin span::before{content:"✓ ";color:var(--terra-d);font-weight:700}
-.plan-grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:34px;align-items:stretch}
-@media(max-width:980px){.plan-grid{grid-template-columns:1fr}}
-.plan{background:var(--cream);border-radius:var(--r);padding:36px 32px;position:relative;transition:transform .2s ease-out;transform-style:preserve-3d}
-.plan.hot{background:var(--terra);color:var(--cream);box-shadow:0 30px 60px -30px rgba(185,106,82,.9)}
-.badge{position:absolute;top:-14px;left:32px;background:var(--ink);color:var(--cream);font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px}
-.plan h3{font-size:34px}
-.for{font-size:15px;opacity:.75;margin-top:4px}
-.price{font-family:var(--serif);font-size:68px;line-height:1;margin:20px 0 4px}
-.price small{font-family:var(--sans);font-size:16px;opacity:.7}
-.blk{margin-top:22px;padding-top:18px;border-top:1px solid rgba(30,27,24,.14)}
-.plan.hot .blk{border-color:rgba(246,241,234,.35)}
-.blk>b{display:block;font-size:15px;margin-bottom:8px}
-.blk ul{list-style:none;padding:0;display:grid;gap:8px;font-size:17px}
-.blk li{display:flex;gap:10px}
-.blk li::before{content:"✓";font-weight:700;color:var(--terra-d)}
-.plan.hot .blk li::before{color:var(--cream)}
-.pro{margin-top:22px;background:var(--ink);color:var(--cream);border-radius:var(--r);padding:clamp(30px,5vw,52px);display:grid;gap:30px;grid-template-columns:1.1fr .9fr;align-items:center}
+.plans{background:var(--blush);border-radius:clamp(26px,4vw,48px);padding:clamp(90px,12vw,160px) var(--gutter)}
+.plans h2{font-size:clamp(46px,7vw,120px);max-width:12ch}
+.plans .intro{max-width:56ch;margin-top:22px;font-size:19px}
+.inc{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.inc span{background:rgba(255,255,255,.6);border-radius:999px;padding:9px 16px;font-size:15px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media(max-width:980px){.pgrid{grid-template-columns:1fr}}
+.plan{background:var(--paper);border-radius:26px;padding:32px 28px;display:flex;flex-direction:column}
+.plan.hot{background:var(--cherry);color:#fff}
+.plan .name{display:flex;justify-content:space-between;align-items:center}
+.plan h3{font-weight:750;font-variation-settings:"wdth" 80;font-size:40px;letter-spacing:-.04em;line-height:1}
+.plan .tag{font-size:13px;font-weight:600;background:var(--espresso);color:#fff;padding:6px 12px;border-radius:999px}
+.plan .for{margin-top:6px;font-size:16px;opacity:.75}
+.plan .price{font-weight:750;font-variation-settings:"wdth" 78;font-size:76px;letter-spacing:-.05em;line-height:1;margin:26px 0 4px}
+.plan .price small{font-size:17px;font-weight:500;letter-spacing:0;opacity:.7}
+.blk{margin-top:22px}
+.blk h4{font-size:14px;font-weight:600;opacity:.7;margin-bottom:8px}
+.blk ul{list-style:none;padding:0}
+.blk li{padding:9px 0;border-top:1px solid rgba(27,20,17,.12);font-size:17px}
+.plan.hot .blk li{border-color:rgba(255,255,255,.3)}
+.pro{margin-top:16px;background:var(--espresso);color:var(--paper);border-radius:26px;padding:clamp(30px,5vw,56px);display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end}
 @media(max-width:860px){.pro{grid-template-columns:1fr}}
-.pro h3{font-size:clamp(38px,5vw,56px)}
-.pro .for{font-size:17px}
-.pro .price{font-size:clamp(46px,6vw,64px)}
-.pro .blk{border-color:rgba(246,241,234,.2);margin:0;padding:0;border:0}
-.pro .blk li::before{color:var(--terra)}
-.mini-cards{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);margin-top:22px}
-@media(max-width:860px){.mini-cards{grid-template-columns:1fr}}
-.mc{background:var(--cream);border-radius:22px;padding:26px 28px}
-.mc h3{font-size:26px}
-.mc .big{font-family:var(--serif);font-size:44px;line-height:1;margin:10px 0}
-.mc p,.mc li{font-size:16px;color:var(--ink-70)}
-.mc ul{list-style:none;padding:0;display:grid;gap:4px;margin-top:8px}
-.note{margin-top:28px;font-size:15px;color:var(--ink-70);max-width:72ch}
+.pro h3{font-weight:750;font-variation-settings:"wdth" 78;font-size:clamp(52px,7vw,104px);letter-spacing:-.05em;line-height:.9}
+.pro .price{font-weight:700;font-size:clamp(30px,3.4vw,44px);margin-top:16px;letter-spacing:-.03em}
+.pro ul{list-style:none;padding:0;border-top:1px solid rgba(243,242,238,.25)}
+.pro li{padding:12px 0;border-bottom:1px solid rgba(243,242,238,.15);font-size:17px}
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media(max-width:860px){.extras{grid-template-columns:1fr}}
+.ex{background:rgba(255,255,255,.55);border-radius:22px;padding:26px}
+.ex h4{font-size:20px;font-weight:700}
+.ex .n{font-weight:750;font-size:48px;letter-spacing:-.04em;line-height:1;margin:10px 0}
+.ex p,.ex li{font-size:16px;color:var(--muted)}
+.ex ul{list-style:none;padding:0;margin-top:8px}
+.ex .btn{height:46px;margin-top:16px;font-size:15px}
+.fine{margin-top:26px;font-size:15px;color:var(--muted);max-width:72ch}
 
 /* ===== WEB ===== */
-.webgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
-@media(max-width:860px){.webgrid{grid-template-columns:1fr}}
-.browser{perspective:1000px}
-.bwin{background:#fff;border-radius:18px;box-shadow:0 40px 70px -30px rgba(30,27,24,.5);overflow:hidden;transform:rotateY(-12deg) rotateX(5deg);transition:transform .25s ease-out;border:1px solid rgba(30,27,24,.1)}
-.bbar{display:flex;gap:7px;padding:12px 16px;background:var(--sand)}
-.bbar i{width:11px;height:11px;border-radius:50%;background:rgba(30,27,24,.25)}
-.bbody{padding:26px;display:grid;gap:12px;background:var(--cream)}
-.bbody .h{height:30px;width:70%;background:var(--ink);border-radius:6px}
-.bbody .s{height:12px;width:46%;background:var(--terra);border-radius:6px}
-.bbody .g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
-.bbody .g div{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center}
-.price-web{font-family:var(--serif);font-size:clamp(44px,6vw,64px);line-height:1;margin-top:22px}
-.price-web small{font-family:var(--sans);font-size:16px;color:var(--ink-70)}
+.web{padding:clamp(90px,12vw,170px) var(--gutter);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+@media(max-width:860px){.web{grid-template-columns:1fr}}
+.web h2{font-size:clamp(46px,7vw,120px);max-width:10ch}
+.web .from{font-weight:750;font-variation-settings:"wdth" 78;font-size:clamp(56px,7vw,110px);letter-spacing:-.05em;line-height:.9;color:var(--cherry)}
+.web p{font-size:19px;max-width:40ch;margin:18px 0 26px}
 
 /* ===== PASOS ===== */
-.steps{display:grid;gap:22px;grid-template-columns:repeat(4,1fr);margin-top:50px}
-@media(max-width:940px){.steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.steps{grid-template-columns:1fr}}
-.step{border-top:2px solid var(--ink);padding-top:20px}
-.step .n{font-family:var(--serif);font-size:64px;line-height:1;color:var(--terra)}
-.step h3{font-size:25px;margin:8px 0}
-.step p{font-size:16px;color:var(--ink-70)}
+.steps{padding:0 var(--gutter) clamp(90px,12vw,170px)}
+.steps h2{font-size:clamp(40px,5.6vw,92px);max-width:14ch}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;counter-reset:s}
+@media(max-width:940px){.sgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.sgrid{grid-template-columns:1fr}}
+.step{border-top:1.5px solid var(--espresso);padding-top:18px}
+.step .n{font-weight:750;font-size:56px;letter-spacing:-.05em;line-height:1;color:var(--cherry)}
+.step h3{font-size:22px;font-weight:700;margin:10px 0 6px;letter-spacing:-.02em}
+.step p{font-size:16px;color:var(--muted)}
 
 /* ===== FAQ ===== */
-.faq{max-width:780px;margin-top:44px}
-details{border-bottom:1px solid rgba(30,27,24,.18);padding:21px 0}
-summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq{padding:0 var(--gutter) clamp(90px,12vw,170px);display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+@media(max-width:860px){.faq{grid-template-columns:1fr}}
+.faq h2{font-size:clamp(40px,5.6vw,92px)}
+details{border-bottom:1px solid var(--stone);padding:20px 0}
+details:first-of-type{border-top:1.5px solid var(--espresso)}
+summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:28px;line-height:1;color:var(--terra);transition:transform .25s}
+summary::after{content:"+";font-size:26px;line-height:1;color:var(--cherry);transition:transform .3s}
 details[open] summary::after{transform:rotate(45deg)}
-details p{margin-top:12px;color:var(--ink-70);font-size:17px;max-width:62ch}
+details p{margin-top:10px;color:var(--muted);font-size:17px;max-width:60ch}
 
 /* ===== CONTACTO ===== */
-.contact{background:var(--ink);color:var(--cream);text-align:center;border-radius:clamp(32px,6vw,64px) clamp(32px,6vw,64px) 0 0}
-.contact h2{max-width:none;margin:0 auto}
-.contact .lead{margin:22px auto 0;color:rgba(246,241,234,.75)}
-.contact .cta-row{margin-top:34px}
-footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;padding:0 0 40px;font-size:14px}
+.contact{background:var(--cherry);color:#fff;border-radius:clamp(26px,4vw,48px) clamp(26px,4vw,48px) 0 0;padding:clamp(70px,10vw,130px) 0 140px;overflow:hidden}
+.marq{display:flex;white-space:nowrap;font-weight:780;font-variation-settings:"wdth" 75;font-size:clamp(90px,17vw,280px);letter-spacing:-.05em;line-height:.85}
+.marq span{animation:mq 22s linear infinite;padding-right:.3em}
+@keyframes mq{to{transform:translateX(-100%)}}
+.contact .inner{padding:0 var(--gutter);margin-top:40px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.contact p{font-size:20px;max-width:34ch}
+.contact .btn{background:#fff;color:var(--cherry);height:62px;padding:0 34px;font-size:18px}
+.foot{padding:30px var(--gutter) 0;font-size:14px;opacity:.75}
 
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stage{animation:none}.btn,.mini,.plan,.bwin{transition:none}}
+@media(prefers-reduced-motion:reduce){.belt,.marq span{animation:none}.btn,.row::before{transition:none}}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <nav aria-label="Principal">
-      <a class="logo" href="#top">Meli<span>.</span></a>
-      <ul>
-        <li><a href="#muestras">Muestras</a></li>
-        <li><a href="#trabajo">Trabajo real</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="#web">Creación web</a></li>
-        <li><a href="#faq">Preguntas</a></li>
-      </ul>
-      <a class="btn btn-solid" href="#contacto" data-contact>Escríbeme</a>
-    </nav>
-  </div>
-</header>
+<div class="top">
+  <a class="logo" href="#top">meli<i>.</i></a>
+  <span class="muted">Contenido para negocios · España y Argentina</span>
+</div>
+
+<nav class="dock" aria-label="Principal">
+  <a class="opt" href="#muestras">Muestras</a>
+  <a class="opt" href="#trabajo">Trabajo</a>
+  <a href="#planes">Planes</a>
+  <a class="opt" href="#web">Web</a>
+  <a class="cta" href="#contacto" data-wa>Escríbeme</a>
+</nav>
 
 <main id="top">
 
-<!-- PORTADA 3D -->
-<section class="hero3d dark" style="padding-top:clamp(8px,3vw,28px)">
-  <h1 class="sr">Meli · Portfolio de contenido para negocios</h1>
-  <div class="stage" id="stage" aria-hidden="true">
-    <div class="floor"></div>
-    <div class="fcard fc1" data-d="46" data-z="70" data-r="-9" style="background-image:url(mascarilla.jpg)"></div>
-    <div class="fcard fc2" data-d="70" data-z="150" data-r="7" style="background-image:url(barberia.jpg)"></div>
-    <div class="fcard fc3" data-d="30" data-z="40" data-r="5" style="background-image:url(cafe.jpg)"></div>
-    <div class="fcard fc4" data-d="86" data-z="190" data-r="-6" style="background-image:url(pilates.jpg)"></div>
-    <div class="rig" id="rig">
-      <div class="word big" data-layers="30">MELI</div>
-      <div class="word sm" data-layers="14">PORTFOLIO</div>
-    </div>
-    <div class="phone3d" data-d="-30" data-z="170" data-base="translateY(-50%) rotateY(-22deg) rotateX(5deg)">
-      <div class="screen"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+<!-- PORTADA -->
+<section class="hero">
+  <div>
+    <h1 class="disp" aria-label="Tu negocio, en el feed todos los días.">
+      <span class="ln"><span>Tu negocio,</span></span>
+      <span class="ln"><span>en el feed</span></span>
+      <span class="ln"><span>todos los días.</span></span>
+    </h1>
+    <p class="lead muted">Estrategia, guiones y edición de contenido para negocios. Te dejo el mes entero planificado y produzco las piezas que más trabajo llevan.</p>
+    <div class="ctas">
+      <a class="btn red" href="#contacto" data-wa>Escribir por WhatsApp</a>
+      <a class="btn line" href="#planes">Ver planes</a>
     </div>
   </div>
-  <div class="hero-copy">
-    <p class="tag">Estrategia y contenido para tu negocio, mes a mes.</p>
-    <p class="lead">Creo y edito posts, carruseles, historias y reels, y te dejo todo el mes planificado y guionado para que lo publiques sin pensar qué toca cada día.</p>
-    <div class="cta-row">
-      <a class="btn btn-solid" href="#contacto" data-contact>Quiero mi plan de contenido</a>
-      <a class="btn btn-ghost" href="#muestras">Ver muestras</a>
-    </div>
+  <div class="cols" aria-hidden="true">
+    <div class="c1"><div class="belt"><div class="m v"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="metadata"></video></div><div class="m p"><img src="mascarilla.jpg" alt="" loading="lazy"></div><div class="m p"><img src="cafe.jpg" alt="" loading="lazy"></div><div class="m p"><img src="moda.jpg" alt="" loading="lazy"></div><div class="m v"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="metadata"></video></div><div class="m p"><img src="mascarilla.jpg" alt="" loading="lazy"></div><div class="m p"><img src="cafe.jpg" alt="" loading="lazy"></div><div class="m p"><img src="moda.jpg" alt="" loading="lazy"></div></div></div>
+    <div class="c2"><div class="belt"><div class="m p"><img src="barberia.jpg" alt="" loading="lazy"></div><div class="m v"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="metadata"></video></div><div class="m p"><img src="cosmetica.jpg" alt="" loading="lazy"></div><div class="m p"><img src="pilates.jpg" alt="" loading="lazy"></div><div class="m p"><img src="barberia.jpg" alt="" loading="lazy"></div><div class="m v"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="metadata"></video></div><div class="m p"><img src="cosmetica.jpg" alt="" loading="lazy"></div><div class="m p"><img src="pilates.jpg" alt="" loading="lazy"></div></div></div>
+    <div class="c3"><div class="belt"><div class="m p"><img src="unas-foto.jpg" alt="" loading="lazy"></div><div class="m p"><img src="brocha.jpg" alt="" loading="lazy"></div><div class="m p"><img src="inmo.jpg" alt="" loading="lazy"></div><div class="m p"><img src="toalla.jpg" alt="" loading="lazy"></div><div class="m p"><img src="unas-foto.jpg" alt="" loading="lazy"></div><div class="m p"><img src="brocha.jpg" alt="" loading="lazy"></div><div class="m p"><img src="inmo.jpg" alt="" loading="lazy"></div><div class="m p"><img src="toalla.jpg" alt="" loading="lazy"></div></div></div>
   </div>
 </section>
 
-<!-- QUÉ HAGO -->
-<section id="que-hago">
-  <div class="wrap">
-    <span class="kicker">Qué hago</span>
-    <h2>Publicar cada día lleva más tiempo del que parece.</h2>
-    <p class="lead">Pensar qué subir, escribir el guion, diseñar, editar. Te dejo todo el mes organizado y produzco una parte de las piezas; el resto lo ejecutas tú con tu kit.</p>
-    <div class="split">
-      <div class="box">
-        <h3>Lo que hago</h3>
-        <ul class="list">
-          <li>Estrategia completa y calendario mensual</li>
-          <li>Brief de marca y guiones de reels listos para grabar</li>
-          <li>Posts y carruseles diseñados con tu identidad</li>
-          <li>Reels editados con tus vídeos</li>
-          <li>Textos y plantillas de historias</li>
-          <li>Guía paso a paso para programar tus publicaciones</li>
-          <li>Días de grabación en tu local</li>
-        </ul>
-      </div>
-      <div class="box dark">
-        <h3>Lo que no hago</h3>
-        <ul class="list">
-          <li>No publico directamente en tus cuentas</li>
-          <li>No respondo mensajes ni comentarios</li>
-          <li>No gestiono publicidad</li>
-        </ul>
-      </div>
+<!-- MANIFIESTO -->
+<section class="manifest" id="que-hago">
+  <p class="big" data-words>Pienso qué subir, escribo los guiones, diseño tus posts y edito tus reels. Tú grabas cuando toca y publicas sin preguntarte cada mañana qué poner.</p>
+  <div class="dos">
+    <div>
+      <h3>Lo que hago</h3>
+      <ul>
+        <li>Estrategia completa y calendario mensual</li>
+        <li>Brief de marca y guiones de reels</li>
+        <li>Posts y carruseles con tu identidad</li>
+        <li>Reels editados con tus vídeos</li>
+        <li>Textos y plantillas de historias</li>
+        <li>Días de grabación en tu local</li>
+      </ul>
     </div>
-    <p class="ai"><b>Cómo trabajo:</b> uso herramientas de IA para crear y editar, y reviso cada pieza antes de entregarla. Así llego rápido sin perder tu estilo.</p>
+    <div class="no">
+      <h3>Lo que no hago</h3>
+      <ul>
+        <li>Publicar directamente en tus cuentas (te guío para programarlo)</li>
+        <li>Responder mensajes o comentarios</li>
+        <li>Gestionar publicidad</li>
+      </ul>
+    </div>
   </div>
+  <p class="ai muted">Trabajo con herramientas de IA y reviso cada pieza antes de entregarla. Así llego rápido sin perder tu estilo.</p>
 </section>
 
 <!-- MUESTRAS -->
-<section id="muestras" style="padding-top:0">
-  <div class="wrap samples-head">
-    <div>
-      <span class="kicker">Muestras</span>
-      <h2>Así podría verse tu contenido.</h2>
+<section class="hsec" id="muestras">
+  <div class="hpin">
+    <div class="hhead">
+      <h2 class="disp">Muestras</h2>
+      <p>Proyectos conceptuales para negocios ficticios, para enseñarte cómo adapto el estilo a cada sector. No son clientes reales.</p>
     </div>
-    <p class="lead" style="margin:0">Proyectos conceptuales para negocios ficticios, hechos para mostrar mi estilo. No son trabajos para clientes reales.</p>
-  </div>
-  <div class="flowwrap">
-    <button class="arrow prev" aria-label="Muestra anterior">‹</button>
-    <div class="flow" id="flow" tabindex="0" aria-label="Muestras de contenido">
+    <div class="trackwrap">
+      <div class="track" id="track">
+
 
       <article class="tile s-estetica" style="background-image:url(mascarilla.jpg)">
         <small>Centro de estética · Post</small>
@@ -426,256 +403,192 @@ footer{background:var(--ink);color:rgba(246,241,234,.55);text-align:center;paddi
         <span class="pill">Agenda tu visita</span><span class="tag">Muestra conceptual</span>
       </article>
     
+    
+        <div class="endcard">¿Tu negocio es otro? Lo adapto a tu sector.<a class="btn red" href="#contacto" data-wa>Cuéntame</a></div>
+      </div>
     </div>
-    <button class="arrow next" aria-label="Muestra siguiente">›</button>
   </div>
-  <p class="hint wrap">Desliza para ver todas. ¿Tu negocio es otro? Mi trabajo se adapta a cada sector.</p>
 </section>
 
 <!-- TRABAJO REAL -->
-<section id="trabajo" class="real dark">
-  <div class="wrap">
-    <span class="kicker">Trabajo real</span>
-    <h2>Contenido que ya he creado.</h2>
-    <div class="real-grid">
-      <div>
-        <p class="lead" style="margin-top:0">Cada carpeta reúne el contenido completo que he hecho para un tipo de negocio. Entra y míralo entero.</p>
-        <div class="drive">
-          <a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener"><div><b>Rosa Monkey</b><span>Contenido para tatuajes</span></div><i>Ver contenido completo</i></a>
-          <a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener"><div><b>Beauty Salon</b><span>Contenido para estética y belleza</span></div><i>Ver contenido completo</i></a>
-          <a href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener"><div><b>Joyería</b><span>Videos y contenido de joyería</span></div><i>Ver contenido completo</i></a>
-        </div>
-      </div>
-      <div class="reels">
-        <div class="mini"><div class="screen"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video></div></div>
-        <div class="mini"><div class="screen"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video></div></div>
-      </div>
+<section class="real" id="trabajo">
+  <div class="real-top">
+    <h2 class="disp">Contenido que ya he creado.</h2>
+    <div class="reels">
+      <div class="m v"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video></div>
+      <div class="m v"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video></div>
     </div>
+  </div>
+  <div class="rows">
+    <a class="row" href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener"><b>Rosa Monkey</b><span>Contenido para tatuajes</span><em>Ver carpeta</em></a>
+    <a class="row" href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener"><b>Beauty Salon</b><span>Contenido para estética y belleza</span><em>Ver carpeta</em></a>
+    <a class="row" href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener"><b>Joyería</b><span>Vídeos y contenido de joyería</span><em>Ver carpeta</em></a>
   </div>
 </section>
 
 <!-- TESTIMONIOS -->
-<section id="testimonios">
-  <div class="wrap">
-    <span class="kicker">Testimonios</span>
-    <h2>Lo que cuenta una clienta.</h2>
-    <p class="lead">Dos vídeos con sus propias palabras. Pulsa play para escucharlos completos.</p>
-    <div class="tests">
-      <figure class="tv"><video src="testimonio1.mp4" poster="testimonio1.jpg" controls playsinline preload="none"></video><figcaption>Testimonio de clienta · parte 1</figcaption></figure>
-      <figure class="tv"><video src="testimonio2.mp4" poster="testimonio2.jpg" controls playsinline preload="none"></video><figcaption>Testimonio de clienta · parte 2</figcaption></figure>
-    </div>
+<section class="tests" id="testimonios">
+  <h2 class="disp">Lo que cuenta una clienta.</h2>
+  <div class="tgrid">
+    <figure class="tv"><video src="testimonio1.mp4" poster="testimonio1.jpg" controls playsinline preload="none"></video><figcaption>Testimonio · parte 1</figcaption></figure>
+    <figure class="tv"><video src="testimonio2.mp4" poster="testimonio2.jpg" controls playsinline preload="none"></video><figcaption>Testimonio · parte 2</figcaption></figure>
   </div>
 </section>
 
 <!-- PLANES -->
-<section id="planes" class="plans">
-  <div class="wrap">
-    <span class="kicker">Planes</span>
-    <h2>Tres formas de tener tu contenido al día.</h2>
-    <p class="lead">Precios mensuales. Un plan por marca. Todo el mes queda planificado; la diferencia está en cuántas piezas produzco yo.</p>
-    <div class="allin">
-      <b>Todos los planes incluyen</b>
-      <span>Estrategia completa</span><span>Brief de marca (primer mes)</span><span>Calendario mensual</span><span>Guiones de reels listos para grabar</span><span>Textos y plantillas</span><span>Guía paso a paso para ejecutarlo</span>
-    </div>
-    <div class="plan-grid">
-      <article class="plan tilt">
-        <h3>Esencial</h3><p class="for">Presencia constante, todo planificado</p>
-        <div class="price">119 €<small> /mes</small></div>
-        <div class="blk"><b>Planificado para todo el mes</b><ul><li>1 post por día</li><li>4 reels por semana</li><li>2 historias por día</li></ul></div>
-        <div class="blk"><b>Lo produzco yo</b><ul><li>4 reels editados</li><li>4 posts diseñados</li></ul></div>
-      </article>
-      <article class="plan hot tilt">
-        <span class="badge">Recomendado</span>
-        <h3>Activo</h3><p class="for">Para crecer con ritmo</p>
-        <div class="price">199 €<small> /mes</small></div>
-        <div class="blk"><b>Planificado para todo el mes</b><ul><li>1 carrusel por día</li><li>6 reels por semana</li><li>4 historias por día</li></ul></div>
-        <div class="blk"><b>Lo produzco yo</b><ul><li>4 reels editados</li><li>8 carruseles diseñados</li></ul></div>
-        <div class="blk"><b>Además</b><ul><li>Optimización de biografía</li></ul></div>
-      </article>
-      <article class="plan tilt">
-        <h3>Plus</h3><p class="for">Máxima presencia y acompañamiento</p>
-        <div class="price">299 €<small> /mes</small></div>
-        <div class="blk"><b>Planificado para todo el mes</b><ul><li>2 posts o carruseles por día</li><li>10 reels por semana</li><li>5 historias por día</li></ul></div>
-        <div class="blk"><b>Lo produzco yo</b><ul><li>8 reels editados</li><li>12 posts o carruseles diseñados</li></ul></div>
-        <div class="blk"><b>Además</b><ul><li>Optimización de biografía</li><li>Llamada mensual de estrategia (45 min)</li></ul></div>
-      </article>
-    </div>
-
-    <div class="pro dark">
-      <div>
-        <span class="kicker" style="color:var(--terra)">Marca personal</span>
-        <h3>Creador Pro</h3>
-        <p class="for">Tu marca personal en redes, todos los días.</p>
-        <div class="price">desde 650 €<small> /mes</small></div>
-        <a class="btn btn-solid" href="#contacto" data-contact style="margin-top:22px">Hablemos de tu marca</a>
-      </div>
-      <div class="blk">
-        <ul>
-          <li>Produzco todo tu contenido: posts, carruseles, historias y reels editados</li>
-          <li>Estrategia completa, guiones y brief de marca</li>
-          <li>Optimización de biografía</li>
-          <li>Llamada de estrategia semanal o quincenal (45 min)</li>
-          <li>Se define contigo en una llamada de diagnóstico</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="mini-cards">
-      <div class="mc"><h3>Día de grabación</h3><div class="big">47 €</div><p>Hasta 3 horas en una ubicación, movilidad incluida. Cada hora extra, 15 €.</p></div>
-      <div class="mc"><h3>Piezas extra</h3><ul><li>Reel editado · 30 €</li><li>Carrusel · 20 €</li><li>Post · 12 €</li></ul></div>
-      <div class="mc"><h3>Mentoría de redes</h3><p>Entiende cómo funcionan Instagram y TikTok, cómo se crea contenido y qué hace cada formato.</p><a class="btn btn-ghost" href="#contacto" data-contact style="margin-top:16px;padding:12px 22px;font-size:15px">Consulta el precio</a></div>
-    </div>
-    <p class="note">Tú facilitas fotos, vídeos, información de tu negocio y precios. Una ronda de ajustes por entrega. No incluye publicación directa en tus cuentas, gestión de mensajes ni publicidad.</p>
+<section class="plans" id="planes">
+  <h2 class="disp">Planes mensuales.</h2>
+  <p class="intro">Todo el mes queda planificado y guionado. Lo que cambia entre planes es cuánto produzco yo. El resto lo ejecutas tú con tu kit.</p>
+  <div class="inc"><span>Estrategia completa</span><span>Brief de marca (primer mes)</span><span>Calendario mensual</span><span>Guiones listos para grabar</span><span>Textos y plantillas</span><span>Guía paso a paso</span></div>
+  <div class="pgrid">
+    <article class="plan">
+      <div class="name"><h3>Esencial</h3></div>
+      <p class="for">Presencia constante, todo planificado</p>
+      <div class="price">119 €<small> /mes</small></div>
+      <div class="blk"><h4>Planificado para el mes</h4><ul><li>1 post por día</li><li>4 reels por semana</li><li>2 historias por día</li></ul></div>
+      <div class="blk"><h4>Lo produzco yo</h4><ul><li>4 reels editados</li><li>4 posts diseñados</li></ul></div>
+    </article>
+    <article class="plan hot">
+      <div class="name"><h3>Activo</h3><span class="tag">Recomendado</span></div>
+      <p class="for">Para crecer con ritmo</p>
+      <div class="price">199 €<small> /mes</small></div>
+      <div class="blk"><h4>Planificado para el mes</h4><ul><li>1 carrusel por día</li><li>6 reels por semana</li><li>4 historias por día</li></ul></div>
+      <div class="blk"><h4>Lo produzco yo</h4><ul><li>4 reels editados</li><li>8 carruseles diseñados</li><li>Optimización de biografía</li></ul></div>
+    </article>
+    <article class="plan">
+      <div class="name"><h3>Plus</h3></div>
+      <p class="for">Máxima presencia y acompañamiento</p>
+      <div class="price">299 €<small> /mes</small></div>
+      <div class="blk"><h4>Planificado para el mes</h4><ul><li>2 posts o carruseles por día</li><li>10 reels por semana</li><li>5 historias por día</li></ul></div>
+      <div class="blk"><h4>Lo produzco yo</h4><ul><li>8 reels editados</li><li>12 posts o carruseles</li><li>Optimización de biografía</li><li>Llamada mensual de estrategia</li></ul></div>
+    </article>
   </div>
-</section>
-
-<!-- CREACIÓN WEB -->
-<section id="web">
-  <div class="wrap webgrid">
+  <div class="pro">
     <div>
-      <span class="kicker">Creación web</span>
-      <h2>Webs para spas y tiendas.</h2>
-      <p class="lead">Sitios pensados para el móvil, con el mismo cuidado de diseño que ves aquí. Esta web también la hice yo.</p>
-      <div class="price-web">desde 500 €</div>
-      <a class="btn btn-solid" href="#contacto" data-contact style="margin-top:24px">Pedir presupuesto</a>
+      <h3>Creador Pro</h3>
+      <p style="margin-top:12px;font-size:19px;opacity:.8">Tu marca personal en redes, todos los días.</p>
+      <div class="price">desde 650 € /mes</div>
+      <a class="btn red" href="#contacto" data-wa style="margin-top:24px">Hablemos de tu marca</a>
     </div>
-    <div class="browser">
-      <div class="bwin tilt">
-        <div class="bbar"><i></i><i></i><i></i></div>
-        <div class="bbody"><div class="h"></div><div class="s"></div>
-          <div class="g"><div style="background-image:url(mascarilla.jpg)"></div><div style="background-image:url(cosmetica.jpg)"></div><div style="background-image:url(moda.jpg)"></div></div>
-        </div>
-      </div>
-    </div>
+    <ul>
+      <li>Produzco todo tu contenido: posts, carruseles, historias y reels</li>
+      <li>Estrategia completa, guiones y brief de marca</li>
+      <li>Optimización de biografía</li>
+      <li>Llamada de estrategia semanal o quincenal</li>
+      <li>Lo definimos en una llamada de diagnóstico</li>
+    </ul>
   </div>
+  <div class="extras">
+    <div class="ex"><h4>Día de grabación</h4><div class="n">47 €</div><p>Hasta 3 horas en una ubicación, movilidad incluida. Hora extra, 15 €.</p></div>
+    <div class="ex"><h4>Piezas extra</h4><ul><li>Reel editado: 30 €</li><li>Carrusel: 20 €</li><li>Post: 12 €</li></ul></div>
+    <div class="ex"><h4>Mentoría de redes</h4><p>Cómo funcionan Instagram y TikTok, cómo crear contenido y para qué sirve cada formato.</p><a class="btn line" href="#contacto" data-wa>Consultar precio</a></div>
+  </div>
+  <p class="fine">Tú facilitas fotos, vídeos, información y precios. Una ronda de ajustes por entrega. Un plan por marca. No incluye publicación directa, gestión de mensajes ni publicidad.</p>
 </section>
 
-<!-- CÓMO FUNCIONA -->
-<section id="como" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker">Cómo funciona</span>
-    <h2>De tu material a tu mes de contenido, en 4 pasos.</h2>
-    <div class="steps">
-      <div class="step"><div class="n">1</div><h3>Hablamos</h3><p>Una llamada breve para conocer tu negocio y elegir el plan.</p></div>
-      <div class="step"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información y precios. Para los reels te paso el guion y tú grabas.</p></div>
-      <div class="step"><div class="n">3</div><h3>Preparo tu mes</h3><p>Estrategia, calendario, guiones y las piezas que produzco yo.</p></div>
-      <div class="step"><div class="n">4</div><h3>Recibes y ajustamos</h3><p>Archivos listos para publicar, con una ronda de ajustes por entrega.</p></div>
-    </div>
+<!-- WEB -->
+<section class="web" id="web">
+  <div>
+    <h2 class="disp">Webs para spas y tiendas.</h2>
+    <p class="muted">Pensadas primero para el móvil y con tu identidad. Esta web también la hice yo.</p>
+    <a class="btn red" href="#contacto" data-wa>Pedir presupuesto</a>
+  </div>
+  <div class="from">desde<br>500 €</div>
+</section>
+
+<!-- PASOS -->
+<section class="steps">
+  <h2 class="disp">Cómo trabajamos.</h2>
+  <div class="sgrid">
+    <div class="step"><div class="n">1</div><h3>Hablamos</h3><p>Una llamada breve para conocer tu negocio y elegir el plan.</p></div>
+    <div class="step"><div class="n">2</div><h3>Me envías tu material</h3><p>Fotos, vídeos, información y precios. Para los reels te paso el guion y tú grabas.</p></div>
+    <div class="step"><div class="n">3</div><h3>Preparo tu mes</h3><p>Estrategia, calendario, guiones y las piezas que produzco yo.</p></div>
+    <div class="step"><div class="n">4</div><h3>Recibes y ajustamos</h3><p>Archivos listos para publicar, con una ronda de ajustes.</p></div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="padding-top:0">
-  <div class="wrap">
-    <span class="kicker">Preguntas</span>
-    <h2>Lo que suelen preguntarme.</h2>
-    <div class="faq">
-      <details><summary>¿Qué significa "planificado" y "lo produzco yo"?</summary><p>Planificado: cada pieza del mes tiene su idea, su guion o texto y su fecha en el calendario. Lo produzco yo: las piezas que diseño o edito personalmente. El resto lo ejecutas tú con el kit, o me lo pides aparte.</p></details>
-      <details><summary>¿Y si quiero que lo hagas todo?</summary><p>Con Creador Pro produzco todo tu contenido. También puedes añadir piezas sueltas a cualquier plan.</p></details>
-      <details><summary>¿Publicas por mí?</summary><p>No publico directamente en tus cuentas. Te guío paso a paso para que dejes todo programado.</p></details>
-      <details><summary>¿Grabas en mi local?</summary><p>Sí, con un día de grabación: 47 €, hasta 3 horas en una ubicación y con la movilidad incluida. Cada hora extra son 15 €.</p></details>
-      <details><summary>¿Qué necesito enviarte?</summary><p>Fotos, vídeos, información de tu negocio y los precios de tus servicios. Para los reels, yo te paso el guion, tú grabas y me envías los vídeos para editar.</p></details>
-      <details><summary>¿Trabajas con IA?</summary><p>Sí. Uso herramientas de IA para crear y editar, y reviso cada pieza antes de entregarla.</p></details>
-      <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por cada entrega.</p></details>
-      <details><summary>¿Gestionas anuncios o mensajes?</summary><p>No. Me centro en la estrategia y en crear y editar tu contenido.</p></details>
-      <details><summary>¿Puedo usar un plan para dos marcas?</summary><p>No. Cada plan es para una marca.</p></details>
-    </div>
+<section class="faq" id="faq">
+  <h2 class="disp">Preguntas.</h2>
+  <div>
+    <details><summary>¿Qué es "planificado" y qué "lo produzco yo"?</summary><p>Planificado: cada pieza del mes tiene su idea, su guion o texto y su fecha en el calendario. Lo produzco yo: las piezas que diseño o edito personalmente. El resto lo ejecutas tú con el kit, o me lo pides aparte.</p></details>
+    <details><summary>¿Y si quiero que lo hagas todo?</summary><p>Con Creador Pro produzco todo tu contenido. También puedes sumar piezas sueltas a cualquier plan.</p></details>
+    <details><summary>¿Publicas por mí?</summary><p>No publico directamente en tus cuentas. Te guío paso a paso para que lo dejes todo programado.</p></details>
+    <details><summary>¿Grabas en mi local?</summary><p>Sí, con un día de grabación: 47 €, hasta 3 horas en una ubicación, movilidad incluida. Cada hora extra, 15 €.</p></details>
+    <details><summary>¿Qué necesito enviarte?</summary><p>Fotos, vídeos, información de tu negocio y precios. Para los reels te paso el guion, grabas y me envías los vídeos.</p></details>
+    <details><summary>¿Trabajas con IA?</summary><p>Sí. Uso herramientas de IA para crear y editar, y reviso cada pieza antes de entregarla.</p></details>
+    <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por entrega.</p></details>
+    <details><summary>¿Puedo usar un plan para dos marcas?</summary><p>No. Cada plan es para una marca.</p></details>
   </div>
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" class="contact dark">
-  <div class="wrap">
-    <span class="kicker" style="color:var(--terra)">Contacto</span>
-    <h2>Hablemos de tu contenido.</h2>
-    <p class="lead">Cuéntame qué tipo de negocio tienes y coordinamos una llamada breve. Sin compromiso.</p>
-    <div class="cta-row"><a class="btn btn-solid" href="#" data-contact>Escribir por WhatsApp</a></div>
+<section class="contact" id="contacto">
+  <div class="marq" aria-hidden="true"><span>Hablemos · Hablemos · </span><span>Hablemos · Hablemos · </span></div>
+  <div class="inner">
+    <p>Cuéntame qué negocio tienes y coordinamos una llamada breve. Sin compromiso.</p>
+    <a class="btn" href="#" data-wa>Escribir por WhatsApp</a>
   </div>
+  <p class="foot">Meli · Estrategia y contenido para negocios</p>
 </section>
 </main>
 
-<footer><p>Meli · Estrategia y contenido para negocios · España y Argentina</p></footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
-const WHATSAPP = "34644888144";
-const waLink = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Meli, vi tu portafolio y quiero hablar de mi contenido");
-document.querySelectorAll("[data-contact]").forEach(a=>{a.href=waLink;a.target="_blank";a.rel="noopener"});
+const WA = "https://wa.me/34644888144?text=" + encodeURIComponent("Hola Meli, vi tu portafolio y quiero hablar de mi contenido");
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href=WA;a.target="_blank";a.rel="noopener"});
 
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const desk = matchMedia("(min-width: 901px)").matches;
 
-/* ---- letras 3D: capas apiladas en profundidad ---- */
-document.querySelectorAll(".word").forEach(w=>{
-  const txt = w.textContent.trim(), n = +w.dataset.layers || 20;
-  w.textContent = "";
-  const front = document.createElement("span"); front.className = "front"; front.textContent = txt; w.appendChild(front);
-  const from = [233,150,122], to = [92,43,32];
-  for(let i=1;i<=n;i++){
-    const k = i/n, c = from.map((v,j)=>Math.round(v+(to[j]-v)*k));
-    const s = document.createElement("span"); s.className = "layer"; s.textContent = txt;
-    s.style.color = "rgb("+c.join(",")+")";
-    s.style.transform = "translateZ(-"+(i*0.018).toFixed(3)+"em)";
-    w.insertBefore(s, front);
-  }
-});
-
-/* ---- portada: inclina todo con el puntero o el dedo ---- */
-const hero = document.querySelector(".hero3d"), rig = document.getElementById("rig");
-const items = [...document.querySelectorAll("#stage [data-d]")];
-let tx=0, ty=0, cx=0, cy=0, hover=false, visible=true;
-hero.addEventListener("pointermove",e=>{const r=hero.getBoundingClientRect();tx=((e.clientX-r.left)/r.width-.5)*2;ty=((e.clientY-r.top)/r.height-.5)*2;hover=true});
-hero.addEventListener("pointerleave",()=>{hover=false});
-new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(hero);
-function paint(){
-  rig.style.transform = "translate(-50%,-50%) rotateX("+(8-cy*9)+"deg) rotateY("+(-10+cx*18)+"deg)";
-  items.forEach(el=>{
-    const d=+el.dataset.d, z=+el.dataset.z||0, r=+el.dataset.r||0, base=el.dataset.base||"";
-    el.style.transform = "translate3d("+(-cx*d)+"px,"+(-cy*d*.7)+"px,"+z+"px) "+base+" rotate("+(r+cx*3)+"deg)";
-  });
-}
-function frame(t){
-  if(visible){
-    if(!hover){tx=Math.sin(t/2600)*.55;ty=Math.cos(t/3400)*.25}
-    cx+=(tx-cx)*.08; cy+=(ty-cy)*.08; paint();
-  }
-  requestAnimationFrame(frame);
-}
-if(reduce){paint()}else{requestAnimationFrame(frame)}
-
-/* ---- muestras: coverflow 3D ---- */
-const flow = document.getElementById("flow"), cards = [...flow.querySelectorAll(".tile")];
-function coverflow(){
-  const fr = flow.getBoundingClientRect(), mid = fr.left + fr.width/2;
-  cards.forEach(c=>{
-    const r = c.getBoundingClientRect(), d = (r.left + r.width/2 - mid)/r.width, a = Math.abs(d);
-    c.style.transform = "rotateY("+(-d*34)+"deg) translateZ("+(-a*110)+"px) scale("+(1-Math.min(a,2.5)*.07)+")";
-    c.style.opacity = Math.max(.35, 1-a*.28);
-    c.style.zIndex = 10-Math.round(a*3);
-  });
-}
-flow.addEventListener("scroll",()=>requestAnimationFrame(coverflow),{passive:true});
-addEventListener("resize",coverflow); coverflow();
-document.querySelector(".arrow.prev").onclick=()=>flow.scrollBy({left:-(cards[0].offsetWidth),behavior:"smooth"});
-document.querySelector(".arrow.next").onclick=()=>flow.scrollBy({left:(cards[0].offsetWidth),behavior:"smooth"});
-window.addEventListener("load",()=>{ // empieza con la 3.ª al centro
-  flow.scrollLeft = cards[0].offsetWidth*1.5 - 0; coverflow();
-});
-
-/* ---- tarjetas que se inclinan con la mano ---- */
-if(!reduce) document.querySelectorAll(".tilt").forEach(el=>{
-  const base = el.classList.contains("bwin") ? "rotateY(-12deg) rotateX(5deg)" : "";
-  el.addEventListener("pointermove",e=>{
-    if(e.pointerType==="touch") return;
-    const r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-    el.style.transform="perspective(900px) rotateX("+(-y*8)+"deg) rotateY("+(x*10)+"deg) translateY(-4px)";
-  });
-  el.addEventListener("pointerleave",()=>{el.style.transform=base});
-});
-
-/* ---- vídeos: reels se reproducen al verse; testimonios con sonido, uno a la vez ---- */
-const vio = new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.4});
-document.querySelectorAll(".mini video").forEach(v=>vio.observe(v));
-const tvs = [...document.querySelectorAll(".tv video")];
+// vídeos: se reproducen solo cuando se ven
+const vio = new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.25});
+document.querySelectorAll(".cols video,.reels video").forEach(v=>vio.observe(v));
+const tvs=[...document.querySelectorAll(".tv video")];
 tvs.forEach(v=>v.addEventListener("play",()=>tvs.forEach(o=>{if(o!==v)o.pause()})));
+
+// palabras del manifiesto
+document.querySelectorAll("[data-words]").forEach(p=>{p.innerHTML=p.textContent.trim().split(/\s+/).map(w=>'<span class="w">'+w+'</span>').join(" ")});
+
+if(!reduce && window.gsap && window.ScrollTrigger){
+  gsap.registerPlugin(ScrollTrigger);
+  let lenis=null;
+  if(window.Lenis){
+    lenis=new Lenis({lerp:.1});
+    lenis.on("scroll",ScrollTrigger.update);
+    gsap.ticker.add(t=>lenis.raf(t*1000)); gsap.ticker.lagSmoothing(0);
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{
+    const id=a.getAttribute("href"); if(id.length<2) return; const t=document.querySelector(id); if(!t) return;
+    e.preventDefault(); lenis?lenis.scrollTo(t,{offset:0}):t.scrollIntoView({behavior:"smooth"});
+  }));
+
+  // entrada de la portada: un solo momento orquestado
+  const tl=gsap.timeline({defaults:{ease:"expo.out"}});
+  tl.from(".hero h1 .ln>span",{yPercent:110,duration:1.2,stagger:.09})
+    .from(".hero .lead,.hero .ctas",{y:24,opacity:0,duration:.9,stagger:.08},"-=.8")
+    .from(".cols>div",{y:80,opacity:0,duration:1.3,stagger:.1},"-=1.1")
+    .from(".dock",{y:90,duration:.9},"-=.9");
+
+  // manifiesto: las palabras se encienden con el scroll
+  gsap.fromTo(".manifest .w",{opacity:.14},{opacity:1,stagger:.06,ease:"none",
+    scrollTrigger:{trigger:".manifest .big",start:"top 80%",end:"bottom 45%",scrub:true}});
+
+  // muestras: avanzan en horizontal mientras bajas (solo en pantallas grandes)
+  if(desk){
+    const track=document.getElementById("track");
+    gsap.to(track,{x:()=>-(track.scrollWidth-innerWidth),ease:"none",
+      scrollTrigger:{trigger:".hsec",start:"top top",end:()=>"+="+(track.scrollWidth-innerWidth),pin:".hpin",scrub:1,invalidateOnRefresh:true}});
+  }
+
+  // titulares de sección: suben desde una máscara
+  gsap.utils.toArray(".real h2,.tests h2,.plans h2,.web h2,.steps h2,.faq h2").forEach(h=>{
+    gsap.from(h,{yPercent:30,opacity:0,duration:1,ease:"expo.out",scrollTrigger:{trigger:h,start:"top 85%"}});
+  });
+  addEventListener("load",()=>ScrollTrigger.refresh());
+}
 </script>
 </body>
 </html>
