@@ -153,6 +153,20 @@ h2.big{font-size:clamp(56px,8vw,120px)}
 .reel figcaption a:hover span{transform:translate(2px,-2px)}
 
 @media(max-width:700px){.reel figcaption{flex-direction:column;gap:2px;font-size:14px}.hero{padding-bottom:10px}}
+
+.subhead{font-size:clamp(30px,3.4vw,42px);margin-top:56px}
+.subhead+ .reels{margin-top:22px}
+.subnote{color:var(--muted);font-size:16px;margin-top:6px}
+.posts{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px);margin-top:22px}
+@media(max-width:980px){.posts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.posts{grid-template-columns:repeat(2,1fr)}}
+.post{margin:0}
+.post img,.post video{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;background:#f3eef0;transition:transform 400ms cubic-bezier(.25,.46,.45,.94)}
+.post:hover img,.post:hover video{transform:scale(1.02)}
+.post figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-top:12px;font-size:15px}
+.post figcaption b{font-weight:600}
+.post figcaption a{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap}
+@media(max-width:700px){.post figcaption{flex-direction:column;gap:2px;font-size:14px}}
 /* ===== TESTIMONIOS ===== */
 .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px;align-items:start}
 @media(max-width:760px){.tgrid{grid-template-columns:1fr}}
@@ -303,6 +317,7 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
 <section class="sec" id="trabajo" style="padding-top:0">
   <div class="wrap">
     <h2 class="reveal big">Mi trabajo</h2>
+    <h3 class="subhead reveal">Reels</h3>
     <div class="reels">
       <figure class="reel reveal"><video src="bea-2.mp4" poster="bea-2.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
       <figure class="reel reveal"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
@@ -311,6 +326,18 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
       <figure class="reel reveal"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
       <figure class="reel reveal"><video src="tat-drag.mp4" poster="tat-drag.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
       <figure class="reel reveal"><video src="bea-3.mp4" poster="bea-3.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+    </div>
+    <h3 class="subhead reveal">Posts</h3>
+    <p class="subnote reveal">Fotos de producto tomadas por mí y editadas con IA.</p>
+    <div class="posts">
+      <figure class="post reveal"><img src="post-navidad1.jpg" alt="Post de producto para Rosa Monkey" loading="lazy"><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="post reveal"><video src="post-gifninja.mp4" poster="post-gifninja.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="post reveal"><img src="post-tough.jpg" alt="Post de producto para Rosa Monkey" loading="lazy"><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="post reveal"><video src="post-gifv12.mp4" poster="post-gifv12.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="post reveal"><img src="post-ghost.jpg" alt="Post de producto para Rosa Monkey" loading="lazy"><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="post reveal"><video src="post-gifzen.mp4" poster="post-gifzen.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="post reveal"><img src="post-navidad2.jpg" alt="Post de producto para Rosa Monkey" loading="lazy"><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="post reveal"><video src="post-gifshort.mp4" poster="post-gifshort.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
     </div>
   </div>
 </section>
@@ -428,7 +455,7 @@ document.querySelectorAll(".reveal").forEach((el,i)=>{el.style.transitionDelay=(
 
 // los vídeos solo se reproducen cuando se ven
 const vio=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.3});
-document.querySelectorAll(".reel video").forEach(v=>vio.observe(v));
+document.querySelectorAll(".reel video,.post video").forEach(v=>vio.observe(v));
 const tvs=[...document.querySelectorAll(".tgrid video")];
 tvs.forEach(v=>v.addEventListener("play",()=>tvs.forEach(o=>{if(o!==v)o.pause()})));
 </script>
