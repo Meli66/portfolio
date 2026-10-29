@@ -62,7 +62,9 @@ h2{font-size:clamp(36px,4.6vw,58px);text-align:center;max-width:20ch;margin:0 au
 
 /* ===== PORTADA ===== */
 .hero{padding:clamp(48px,7vw,96px) 0 clamp(60px,8vw,110px)}
-.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero .wrap{text-align:center;max-width:900px}
+.hero p{margin-left:auto;margin-right:auto}
+.hero .ctas{justify-content:center}
 @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
 .hero h1{font-size:clamp(46px,6.2vw,86px)}
 .hero p{font-size:clamp(17px,1.5vw,19px);color:var(--muted);max-width:46ch;margin-top:22px}
@@ -135,6 +137,22 @@ h2{font-size:clamp(36px,4.6vw,58px);text-align:center;max-width:20ch;margin:0 au
 .card-link span{transition:transform var(--t)}
 .card-link:hover span{transform:translate(2px,-2px)}
 
+
+/* ===== MI TRABAJO: vídeos grandes, sin recuadro ===== */
+h2.big{font-size:clamp(56px,8vw,120px)}
+.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px);margin-top:48px}
+@media(max-width:980px){.reels{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.reels{grid-template-columns:repeat(2,1fr)}}
+.reel{margin:0}
+.reel video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:#f3eef0;transition:transform 400ms cubic-bezier(.25,.46,.45,.94)}
+.reel:hover video{transform:scale(1.02)}
+.reel figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-top:12px;font-size:15px}
+.reel figcaption b{font-weight:600}
+.reel figcaption a{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap}
+.reel figcaption a span{display:inline-block;transition:transform var(--t)}
+.reel figcaption a:hover span{transform:translate(2px,-2px)}
+
+@media(max-width:700px){.reel figcaption{flex-direction:column;gap:2px;font-size:14px}.hero{padding-bottom:10px}}
 /* ===== TESTIMONIOS ===== */
 .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px;align-items:start}
 @media(max-width:760px){.tgrid{grid-template-columns:1fr}}
@@ -215,7 +233,6 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
       <li><a href="#trabajo">Mi trabajo</a></li>
       <li><a href="#como">Cómo trabajamos</a></li>
       <li><a href="#planes">Planes</a></li>
-      <li><a href="#web">Webs</a></li>
     </ul>
     <a class="btn btn--primary" href="#contacto" data-wa>Auditoría gratuita</a>
   </div>
@@ -233,11 +250,6 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
         <a class="btn btn--primary" href="#contacto" data-wa>Pide tu auditoría gratuita</a>
         <a class="btn btn--ghost" href="#planes">Ver planes</a>
       </div>
-    </div>
-    <div class="stage reveal">
-      <div class="photo"><img src="hero.jpg" alt="Espacio de un salón en tonos pastel" fetchpriority="high"></div>
-      <div class="phone"><div class="scr"><video src="bea-2.mp4" poster="bea-2.jpg" muted loop playsinline autoplay preload="metadata"></video></div></div>
-      <div class="badge"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></i><span>Auditoría gratuita</span></div>
     </div>
   </div>
 </section>
@@ -260,7 +272,7 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
 <section style="padding:0 var(--gutter)">
   <div class="cta-card card reveal">
     <h2>¿Quieres una <em>auditoría</em> de tu perfil?</h2>
-    <p>Reviso tu Instagram y te cuento qué mejoraría, sin compromiso.</p>
+    <p>Reviso tu Instagram y te cuento qué mejoraría.</p>
     <a class="btn btn--primary" href="#contacto" data-wa>Pedir mi auditoría</a>
   </div>
 </section>
@@ -290,44 +302,15 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
 <!-- MI TRABAJO -->
 <section class="sec" id="trabajo" style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow reveal">Mi trabajo</span>
-    <h2 class="reveal">Así se ve el contenido que <em>creo</em></h2>
-    <p class="sub reveal">Un vistazo real a lo que tu negocio tendría.</p>
-    <div class="showcase">
-      <article class="show card reveal">
-        <div class="media"><span class="blob"></span><div class="r"><video src="bea-2.mp4" poster="bea-2.jpg" muted loop playsinline preload="none"></video></div><div class="r"><video src="bea-1.mp4" poster="bea-1.jpg" muted loop playsinline preload="none"></video></div><div class="r"><video src="bea-3.mp4" poster="bea-3.jpg" muted loop playsinline preload="none"></video></div></div>
-        <span class="tag">Beauty Salon · Peluquería</span>
-        <h3>Color, alisado y cortes</h3>
-        <p>Reels del proceso y del resultado, grabados en el salón.</p>
-        <a class="card-link" href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a>
-      </article>
-      <article class="show card reveal">
-        <div class="media"><span class="blob"></span><div class="r"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video></div><div class="r"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video></div></div>
-        <span class="tag">Beauty Salon · Estética</span>
-        <h3>Cejas y uñas</h3>
-        <p>Paso a paso de cada servicio, con edición profesional.</p>
-        <a class="card-link" href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a>
-      </article>
-      <article class="show card reveal">
-        <div class="media"><span class="blob"></span><div class="r"><video src="joya-reel.mp4" poster="joya-reel.jpg" muted loop playsinline preload="none"></video></div></div>
-        <span class="tag">Joyería</span>
-        <h3>Producto que brilla</h3>
-        <p>Vídeos de producto para mostrar cada pieza.</p>
-        <a class="card-link" href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a>
-      </article>
-      <article class="show card reveal">
-        <div class="media"><span class="blob"></span><div class="r"><video src="tat-drag.mp4" poster="tat-drag.jpg" muted loop playsinline preload="none"></video></div></div>
-        <span class="tag">Rosa Monkey · Tatuajes</span>
-        <h3>Contenido de estudio</h3>
-        <p>Reels para un estudio de tatuajes y su comunidad.</p>
-        <a class="card-link" href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a>
-      </article>
-      <article class="show card wide reveal">
-        <div class="media"><span class="blob"></span><div class="thumb"><img src="cafe.jpg" alt="Ejemplo para cafetería" loading="lazy"></div><div class="thumb"><img src="moda.jpg" alt="Ejemplo para tienda de ropa" loading="lazy"></div><div class="thumb"><img src="cosmetica.jpg" alt="Ejemplo para cosmética" loading="lazy"></div></div>
-        <span class="tag">Otros sectores</span>
-        <h3>¿Tu negocio es otro?</h3>
-        <p>Cafeterías, tiendas, cosmética: adapto el estilo a cada marca. Estas imágenes son ejemplos de referencia.</p>
-      </article>
+    <h2 class="reveal big">Mi trabajo</h2>
+    <div class="reels">
+      <figure class="reel reveal"><video src="bea-2.mp4" poster="bea-2.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="joya-reel.mp4" poster="joya-reel.jpg" muted loop playsinline preload="none"></video><figcaption><b>Joyería</b><a href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="bea-1.mp4" poster="bea-1.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="tat-drag.mp4" poster="tat-drag.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="bea-3.mp4" poster="bea-3.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
     </div>
   </div>
 </section>
@@ -348,7 +331,7 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
   <div class="wrap">
     <span class="eyebrow reveal">Planes</span>
     <h2 class="reveal">Estrategia y acompañamiento en <em>todos</em> los planes</h2>
-    <p class="sub reveal">Todo tu mes queda planificado y guionado. Lo que cambia es cuánto contenido produzco yo.</p>
+    <p class="sub reveal">Todo tu mes queda planificado y guionado.</p>
     <div class="chips reveal"><span>Auditoría y competencia</span><span>Brief de marca y objetivos</span><span>Estrategia y calendario</span><span>Guiones listos</span><span>Textos y plantillas</span><span>Acompañamiento todo el mes</span></div>
     <div class="pgrid">
       <article class="plan card reveal">
@@ -378,7 +361,7 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
       <span class="tag ttl">Para sumar a cualquier plan</span>
       <div><b>47 €</b><span>Día de grabación en tu local. Hasta 3 h, movilidad incluida. Hora extra, 15 €.</span></div>
       <div><b>30 €</b><span>Reel extra con edición profesional</span></div>
-      <div><b>20 € · 12 €</b><span>Carrusel extra · Post extra</span></div>
+      <div><b>12 € · 6 €</b><span>Carrusel extra · Post extra</span></div>
       <div><b>Mentoría</b><span>Cómo funcionan Instagram y TikTok. </span><a class="card-link" href="#contacto" data-wa style="margin-top:4px">Consultar precio <span>↗</span></a></div>
     </div>
 
@@ -401,23 +384,6 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
         <li>Llamada de estrategia semanal o quincenal</li>
       </ul>
     </div>
-    <p class="fine">Un plan por marca. Una ronda de ajustes por entrega. No incluye publicación directa en tus cuentas, gestión de mensajes ni publicidad.</p>
-  </div>
-</section>
-
-<!-- WEB -->
-<section class="sec" id="web" style="padding-top:0">
-  <div class="wrap">
-    <div class="webcard card reveal">
-      <span class="blob" style="left:80%"></span>
-      <div>
-        <span class="tag">Websites</span>
-        <h2>Webs para spas y <em>tiendas</em></h2>
-        <p>Pensadas para el móvil y con tu identidad. Esta web también la hice yo.</p>
-        <a class="btn btn--primary" href="#contacto" data-wa>Pedir presupuesto</a>
-      </div>
-      <div class="from"><small>desde</small>500 €</div>
-    </div>
   </div>
 </section>
 
@@ -428,12 +394,12 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
     <h2 class="reveal">Lo que suelen <em>preguntarme</em></h2>
     <div class="faq reveal">
       <details><summary>¿Cómo empiezo?</summary><p>Con una auditoría gratuita: reviso tu perfil y hacemos una llamada breve para conocer tu negocio. Con eso te recomiendo el plan que mejor te encaja.</p></details>
-      <details><summary>¿Grabas en mi local?</summary><p>Sí. El día de grabación cuesta 47 € (hasta 3 horas en una ubicación, movilidad incluida; cada hora extra, 15 €). En el plan Creador Pro ya está incluido.</p></details>
+      <details><summary>¿Grabas en mi local?</summary><p>Sí. El día de grabación cuesta 47 € (hasta 3 horas en una ubicación, movilidad incluida; cada hora extra, 15 €). En el plan Creador Pro ya está todo incluido.</p></details>
       <details><summary>¿Qué es "planificado" y qué "lo produzco yo"?</summary><p>Planificado: cada pieza del mes tiene su idea, su guion o texto y su fecha en el calendario. Lo produzco yo: las piezas que diseño o edito personalmente. El resto te lo dejo listo para publicar, o me lo pides aparte.</p></details>
       <details><summary>¿Y si quiero que lo hagas todo?</summary><p>Con Creador Pro me ocupo de todo tu contenido, con grabación incluida.</p></details>
       <details><summary>¿Publicas por mí?</summary><p>No publico directamente en tus cuentas. Te acompaño paso a paso para que lo dejes todo programado.</p></details>
       <details><summary>¿Trabajas con IA?</summary><p>Sí, como apoyo para crear y editar. Reviso cada pieza antes de entregarla.</p></details>
-      <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por entrega.</p></details>
+      <details><summary>¿Cuántos ajustes incluye?</summary><p>Una ronda de ajustes por entrega. En los planes Plus y Creador Pro, hasta dos rondas.</p></details>
     </div>
   </div>
 </section>
@@ -462,7 +428,7 @@ document.querySelectorAll(".reveal").forEach((el,i)=>{el.style.transitionDelay=(
 
 // los vídeos solo se reproducen cuando se ven
 const vio=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.3});
-document.querySelectorAll(".media video,.phone video").forEach(v=>vio.observe(v));
+document.querySelectorAll(".reel video").forEach(v=>vio.observe(v));
 const tvs=[...document.querySelectorAll(".tgrid video")];
 tvs.forEach(v=>v.addEventListener("play",()=>tvs.forEach(o=>{if(o!==v)o.pause()})));
 </script>
