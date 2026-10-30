@@ -140,9 +140,17 @@ h2{font-size:clamp(36px,4.6vw,58px);text-align:center;max-width:20ch;margin:0 au
 
 /* ===== MI TRABAJO: vídeos grandes, sin recuadro ===== */
 h2.big{font-size:clamp(56px,8vw,120px)}
-.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px);margin-top:48px}
-@media(max-width:980px){.reels{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:700px){.reels{grid-template-columns:repeat(2,1fr)}}
+.reels{display:flex;justify-content:center;gap:clamp(14px,1.6vw,20px);margin-top:28px}
+.subhead+.reels{margin-top:22px}
+.reels .reel{flex:0 0 calc((100% - 4*clamp(14px,1.6vw,20px))/5);min-width:0}
+.reels .reel figcaption{flex-direction:column;gap:2px}
+.reelwide{margin-top:28px}
+.reel.wide video{aspect-ratio:8/3}
+@media(max-width:860px){
+  .reels{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;margin-left:calc(var(--gutter)*-1);margin-right:calc(var(--gutter)*-1);padding:0 var(--gutter) 6px;scroll-padding-inline:var(--gutter);scrollbar-width:none}
+  .reels::-webkit-scrollbar{display:none}
+  .reels .reel{flex:0 0 62vw;scroll-snap-align:start}
+}
 .reel{margin:0}
 .reel video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:#f3eef0;transition:transform 400ms cubic-bezier(.25,.46,.45,.94)}
 .reel:hover video{transform:scale(1.02)}
@@ -323,11 +331,18 @@ footer{padding:40px 0 50px;text-align:center;font-size:14px;color:var(--muted);b
     <div class="reels">
       <figure class="reel reveal"><video src="bea-2.mp4" poster="bea-2.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
       <figure class="reel reveal"><video src="cejas.mp4" poster="cejas.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
-      <figure class="reel reveal"><video src="joya-reel.mp4" poster="joya-reel.jpg" muted loop playsinline preload="none"></video><figcaption><b>Joyería</b><a href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
       <figure class="reel reveal"><video src="bea-1.mp4" poster="bea-1.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
       <figure class="reel reveal"><video src="unas.mp4" poster="unas.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
-      <figure class="reel reveal"><video src="tat-drag.mp4" poster="tat-drag.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
       <figure class="reel reveal"><video src="bea-3.mp4" poster="bea-3.jpg" muted loop playsinline preload="none"></video><figcaption><b>Beauty Salon</b><a href="https://drive.google.com/drive/folders/1MW6gHm4oVQF7Rp8Ys4Nx7CkbZU1p4iQm" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+    </div>
+    <div class="reels">
+      <figure class="reel reveal"><video src="joya-reel.mp4" poster="joya-reel.jpg" muted loop playsinline preload="none"></video><figcaption><b>Joyería</b><a href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="tat-drag.mp4" poster="tat-drag.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="tat-sem.mp4" poster="tat-sem.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+      <figure class="reel reveal"><video src="tat-siren.mp4" poster="tat-siren.jpg" muted loop playsinline preload="none"></video><figcaption><b>Rosa Monkey</b><a href="https://drive.google.com/drive/folders/1pWY_i5bQNF2B7GDXDzQxyQuH197Idi9k" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
+    </div>
+    <div class="reelwide">
+      <figure class="reel wide reveal"><video src="joya-event.mp4" poster="joya-event.jpg" muted loop playsinline preload="none"></video><figcaption><b>Joyería</b><a href="https://drive.google.com/drive/folders/1saOujgfJuqRfZaDR0a-BIxfwzU5xmWsC" target="_blank" rel="noopener">Ver carpeta <span>↗</span></a></figcaption></figure>
     </div>
     <h3 class="subhead reveal">Posts</h3>
     <p class="subnote reveal">Fotos de producto tomadas por mí y editadas con IA.</p>
